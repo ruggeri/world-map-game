@@ -1,11 +1,15 @@
+import CountryDataMap from "./country_data";
+import CountrySuccessStatisticsMap from "./country_success_statistics";
+import Game from "./game";
 import WorldMap from "./world_map";
-import { Game } from "./game";
-import { loadCountrySuccessStatisticsMap } from "./country_success_statistics";
 
 async function main() {
-  const worldMap = await WorldMap.load();
-  await loadCountrySuccessStatisticsMap();
-  new Game(worldMap);
+  const allDataMap = CountryDataMap.allDataMap();
+  const countrySuccessStatisticsMap = await CountrySuccessStatisticsMap.fetchMapFromServer();
+  const worldMap = await WorldMap.fetchMapFromServer();
+  new Game(allDataMap, countrySuccessStatisticsMap, worldMap);
 }
 
-main();
+main().catch((e) => {
+  console.log(e);
+});

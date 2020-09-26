@@ -4,10 +4,16 @@ export default class WorldMap {
   // TODO: This should be SVGElement?
   worldMapSVGEl: HTMLElement;
 
-  static load(): Promise<WorldMap> {
+  static fetchMapFromServer(): Promise<WorldMap> {
     const worldMapObjectEl = document.getElementById(
       "world-map"
     ) as HTMLObjectElement;
+    // Has the data already loaded?
+    if (worldMapObjectEl.contentDocument) {
+      return Promise.resolve(new WorldMap(worldMapObjectEl));
+    }
+
+    // If not, wait for it to be loaded.
     return new Promise<WorldMap>((resolve, reject) => {
       worldMapObjectEl.addEventListener("load", () => {
         resolve(new WorldMap(worldMapObjectEl));

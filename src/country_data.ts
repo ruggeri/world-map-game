@@ -5,14 +5,6 @@ export enum SovereigntyLevel {
   UNObserver,
 }
 
-interface RawCountryDatum {
-  isoCountryCode: string;
-  countryName: string;
-  population: string;
-  sovereigntyLevel: SovereigntyLevel;
-  parentCountry?: string;
-}
-
 export interface CountryDatum {
   isoCountryCode: string;
   countryName: string;
@@ -21,7 +13,18 @@ export interface CountryDatum {
   parentCountry?: string;
 }
 
-const rawCountryData: Record<string, RawCountryDatum> = {
+interface RawCountryDatum {
+  isoCountryCode: string;
+  countryName: string;
+  population: string;
+  sovereigntyLevel: SovereigntyLevel;
+  parentCountry?: string;
+}
+
+type CountryDataMapRecord = Record<string, RawCountryDatum>;
+type RawCountryDataMap = Map<string, CountryDatum>;
+
+const rawCountryData: CountryDataMapRecord = {
   /* A */
   AD: {
     isoCountryCode: "AD",
@@ -1605,17 +1608,50 @@ const rawCountryData: Record<string, RawCountryDatum> = {
   },
 };
 
-export function getCountryData(): Map<string, CountryDatum> {
-  const countryDataMap = new Map();
+export class CountryDataMap {
+  countryDataMap: Map<string, CountryDatum>;
 
-  for (const rawCountryDatum of Object.values(rawCountryData)) {
-    const countryDatum: CountryDatum = {
-      ...rawCountryDatum,
-      population: Number(rawCountryDatum.population),
-    };
+  static allDataMap(): CountryDataMap {
+    const countryDataMap: RawCountryDataMap = new Map();
+    for (const isoCountryCode in rawCountryData) {
+      const rawCountryDatum = rawCountryData[isoCountryCode];
+      const countryDatum: CountryDatum = {
+        ...rawCountryDatum,
+        population: Number(rawCountryDatum.population),
+      };
+      countryDataMap.set(isoCountryCode, countryDatum);
+    }
 
-    countryDataMap.set(countryDatum.isoCountryCode, countryDatum);
+    return new CountryDataMap(countryDataMap);
   }
 
-  return countryDataMap;
+  constructor(countryDataMap: RawCountryDataMap) {
+    this.countryDataMap = countryDataMap;
+  }
+
+  filter(filterFn: (countryDatum: CountryDatum) => boolean): CountryDataMap {
+    const filteredCountryDataMap: RawCountryDataMap = new Map();
+    for (const countryDatum of this.countryDataMap.values()) {
+      if (!filterFn(countryDatum)) {
+        continue;
+      }
+      filteredCountryDataMap.set(countryDatum.isoCountryCode, countryDatum);
+    }
+
+    return new CountryDataMap(filteredCountryDataMap);
+  }
+
+  getDataForCode(isoCountryCode: string): CountryDatum | null {
+    return this.countryDataMap.get(isoCountryCode.toUpperCase()) || null;
+  }
+
+  keys() {
+    return this.countryDataMap.keys();
+  }
+
+  [Symbol.iterator]() {
+    return this.countryDataMap.values();
+  }
 }
+
+export default CountryDataMap;

@@ -1,4 +1,4 @@
-import { CountryDatum, getCountryData } from "./country_data";
+import CountryDataMap from "./country_data";
 
 export interface CountrySuccessStatistics {
   isoCountryCode: string;
@@ -6,88 +6,91 @@ export interface CountrySuccessStatistics {
   timesGuessedIncorrectly: number;
 }
 
-let countrySuccessStatisticsMap: Record<string, CountrySuccessStatistics>;
+type CountrySuccessStatisticsRecord = Record<string, CountrySuccessStatistics>;
+type RawCountrySuccessStatisticsMap = Map<string, CountrySuccessStatistics>;
 
-export async function loadCountrySuccessStatisticsMap() {
-  countrySuccessStatisticsMap = await (
-    await fetch("country-success-statistics")
-  ).json();
+export class CountrySuccessStatisticsMap {
+  countrySuccessStatisticsMap: RawCountrySuccessStatisticsMap;
 
-  for (const countryDatum of getCountryData().values()) {
-    if (countryDatum.isoCountryCode in countrySuccessStatisticsMap) {
-      continue;
+  static async fetchMapFromServer(): Promise<CountrySuccessStatisticsMap> {
+    const serverCountrySuccessStatisticsRecord = (await (
+      await fetch("country-success-statistics")
+    ).json()) as CountrySuccessStatisticsRecord;
+
+    const countrySuccessStatisticsMap = new Map();
+    for (const isoCountryCode in serverCountrySuccessStatisticsRecord) {
+      const countrySuccessStatistics =
+        serverCountrySuccessStatisticsRecord[isoCountryCode];
+      countrySuccessStatisticsMap.set(isoCountryCode, countrySuccessStatistics);
     }
 
-    countrySuccessStatisticsMap[countryDatum.isoCountryCode] = {
-      isoCountryCode: countryDatum.isoCountryCode,
+    return new CountrySuccessStatisticsMap(countrySuccessStatisticsMap);
+  }
+
+  constructor(countrySuccessStatisticsMap: RawCountrySuccessStatisticsMap) {
+    this.countrySuccessStatisticsMap = countrySuccessStatisticsMap;
+  }
+
+  statisticsForCode(isoCountryCode: string): CountrySuccessStatistics {
+    const countrySuccessStatistics = this.countrySuccessStatisticsMap.get(
+      isoCountryCode.toUpperCase()
+    );
+
+    if (countrySuccessStatistics) {
+      return countrySuccessStatistics;
+    }
+
+    return {
+      isoCountryCode,
       timesGuessedCorrectly: 0,
       timesGuessedIncorrectly: 0,
     };
   }
-}
 
-export function getCountryStatistics(
-  countryCode: string
-): CountrySuccessStatistics {
-  if (!countrySuccessStatisticsMap) {
-    throw new Error(
-      "must not call getCountryStatistics before statistics are loaded"
-    );
+  async update(isoCountryCode: string, direction: "correct" | "incorrect") {
+    const response = await fetch("country-success-statistics", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        isoCountryCode,
+        direction,
+      }),
+    });
+
+    const newSuccessStatistics = await response.json();
+    this.countrySuccessStatisticsMap.set(isoCountryCode, newSuccessStatistics);
   }
 
-  return countrySuccessStatisticsMap[countryCode.toUpperCase()];
-}
+  lowestRankCountry(
+    allCountries: CountryDataMap,
+    pseudocounts: number
+  ): string {
+    let lowestCountryCode: string | null = null;
+    let lowestCountryPercentage: number | null = null;
+    for (const countryDatum of allCountries) {
+      const isoCountryCode = countryDatum.isoCountryCode;
+      const countryStatistics = this.statisticsForCode(isoCountryCode);
 
-export async function updateCountryStatistics(
-  isoCountryCode: string,
-  direction: "correct" | "incorrect"
-) {
-  const response = await fetch("country-success-statistics", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      isoCountryCode,
-      direction,
-    }),
-  });
+      const countryPercentage =
+        countryStatistics.timesGuessedCorrectly /
+        (countryStatistics.timesGuessedIncorrectly +
+          countryStatistics.timesGuessedCorrectly +
+          pseudocounts);
 
-  const newSuccessStatistics = await response.json();
-  countrySuccessStatisticsMap[isoCountryCode] = newSuccessStatistics;
-}
-
-export function lowestRankCountry(
-  allCountries: Map<string, CountryDatum>,
-  pseudocounts: number
-): string {
-  if (!countrySuccessStatisticsMap) {
-    if (!countrySuccessStatisticsMap) {
-      throw new Error(
-        "must not call lowestRankCountry before statistics are loaded"
-      );
+      if (
+        lowestCountryCode === null ||
+        lowestCountryPercentage === null ||
+        countryPercentage < lowestCountryPercentage
+      ) {
+        lowestCountryCode = countryStatistics.isoCountryCode;
+        lowestCountryPercentage = countryPercentage;
+      }
     }
-  }
 
-  let lowestCountryCode: string | null = null;
-  let lowestCountryPercentage: number | null = null;
-  for (const countryCode of allCountries.keys()) {
-    const countryStatistics = getCountryStatistics(countryCode);
-    const countryPercentage =
-      countryStatistics.timesGuessedCorrectly /
-      (countryStatistics.timesGuessedIncorrectly +
-        countryStatistics.timesGuessedCorrectly +
-        pseudocounts);
-
-    if (
-      lowestCountryCode === null ||
-      lowestCountryPercentage === null ||
-      countryPercentage < lowestCountryPercentage
-    ) {
-      lowestCountryCode = countryStatistics.isoCountryCode;
-      lowestCountryPercentage = countryPercentage;
-    }
+    return lowestCountryCode!;
   }
-  console.log(lowestCountryCode);
-  return lowestCountryCode!;
 }
+
+export default CountrySuccessStatisticsMap;
