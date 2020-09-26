@@ -1,85 +1,59 @@
 import { CountryDatum, getCountryData } from "./country_data";
 
-interface CountrySuccessStatistics {
+export interface CountrySuccessStatistics {
   isoCountryCode: string;
   timesGuessedCorrectly: number;
   timesGuessedIncorrectly: number;
 }
 
-let countrySuccessStatisticsMap: Map<string, CountrySuccessStatistics>;
+let countrySuccessStatisticsMap: Record<string, CountrySuccessStatistics>;
 
-export function initializeCountrySuccessStatistics() {
-  console.log("initializing country success statistics map");
-  countrySuccessStatisticsMap = new Map();
+export async function loadCountrySuccessStatisticsMap() {
+  countrySuccessStatisticsMap = await (
+    await fetch("country-success-statistics")
+  ).json();
+
   for (const countryDatum of getCountryData().values()) {
-    countrySuccessStatisticsMap.set(countryDatum.isoCountryCode, {
+    if (countryDatum.isoCountryCode in countrySuccessStatisticsMap) {
+      continue;
+    }
+
+    countrySuccessStatisticsMap[countryDatum.isoCountryCode] = {
       isoCountryCode: countryDatum.isoCountryCode,
       timesGuessedCorrectly: 0,
       timesGuessedIncorrectly: 0,
-    });
+    };
   }
-
-  saveCountrySuccessStatisticsMap();
-}
-
-function loadCountrySuccessStatisticsMap() {
-  let countrySuccessStatisticsString = localStorage.getItem(
-    "countrySuccessStatisticsMap"
-  );
-
-  if (countrySuccessStatisticsString === null) {
-    initializeCountrySuccessStatistics();
-    return;
-  }
-
-  console.log("deserializing country success statistics map");
-  let countrySuccessStatisticsObject = JSON.parse(
-    countrySuccessStatisticsString
-  ) as Object;
-  countrySuccessStatisticsMap = new Map(
-    Object.entries(countrySuccessStatisticsObject)
-  );
-}
-
-function saveCountrySuccessStatisticsMap() {
-  console.log("saving country success statistics map");
-  const countrySuccessStatisticsObject: Record<
-    string,
-    CountrySuccessStatistics
-  > = {};
-  for (const [key, value] of countrySuccessStatisticsMap.entries()) {
-    countrySuccessStatisticsObject[key] = value;
-  }
-
-  const countrySuccessStatisticsString = JSON.stringify(
-    countrySuccessStatisticsObject
-  );
-  localStorage.setItem(
-    "countrySuccessStatisticsMap",
-    countrySuccessStatisticsString
-  );
 }
 
 export function getCountryStatistics(
   countryCode: string
 ): CountrySuccessStatistics {
   if (!countrySuccessStatisticsMap) {
-    loadCountrySuccessStatisticsMap();
+    throw new Error(
+      "must not call getCountryStatistics before statistics are loaded"
+    );
   }
 
-  return countrySuccessStatisticsMap.get(countryCode.toUpperCase())!;
+  return countrySuccessStatisticsMap[countryCode.toUpperCase()];
 }
 
-export function markCountryCorrect(countryCode: string) {
-  const countrySuccessStatistics = getCountryStatistics(countryCode);
-  countrySuccessStatistics.timesGuessedCorrectly++;
-  saveCountrySuccessStatisticsMap();
-}
+export async function updateCountryStatistics(
+  isoCountryCode: string,
+  direction: "correct" | "incorrect"
+) {
+  const response = await fetch("country-success-statistics", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      isoCountryCode,
+      direction,
+    }),
+  });
 
-export function markCountryIncorrect(countryCode: string) {
-  const countrySuccessStatistics = getCountryStatistics(countryCode);
-  countrySuccessStatistics.timesGuessedIncorrectly++;
-  saveCountrySuccessStatisticsMap();
+  return await response.json();
 }
 
 export function lowestRankCountry(
@@ -87,7 +61,11 @@ export function lowestRankCountry(
   pseudocounts: number
 ): string {
   if (!countrySuccessStatisticsMap) {
-    loadCountrySuccessStatisticsMap();
+    if (!countrySuccessStatisticsMap) {
+      throw new Error(
+        "must not call lowestRankCountry before statistics are loaded"
+      );
+    }
   }
 
   let lowestCountryCode: string | null = null;

@@ -63,15 +63,21 @@ export class Game {
     );
   }
 
-  attemptGuess(guessedCountryCode: string) {
+  async attemptGuess(guessedCountryCode: string) {
     console.log(`You clicked: ${guessedCountryCode}`);
 
     if (this.targetCountry.isoCountryCode === guessedCountryCode) {
       this.worldMap.setCountryColor(this.targetCountry.isoCountryCode, "green");
-      CountryStatistics.markCountryCorrect(this.targetCountry.isoCountryCode);
+      await CountryStatistics.updateCountryStatistics(
+        this.targetCountry.isoCountryCode,
+        "correct"
+      );
       this.startNextTurn();
     } else {
-      CountryStatistics.markCountryIncorrect(this.targetCountry.isoCountryCode);
+      await CountryStatistics.updateCountryStatistics(
+        this.targetCountry.isoCountryCode,
+        "incorrect"
+      );
     }
   }
 }
