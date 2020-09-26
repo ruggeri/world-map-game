@@ -731,6 +731,12 @@ const rawCountryData: Record<string, RawCountryDatum> = {
     population: "92533",
     sovereigntyLevel: SovereigntyLevel.UNMemberState,
   },
+  KP: {
+    isoCountryCode: "KP",
+    countryName: "North Korea",
+    population: "25549604",
+    sovereigntyLevel: SovereigntyLevel.UNMemberState,
+  },
   KR: {
     isoCountryCode: "KR",
     countryName: "South Korea",
@@ -1199,7 +1205,7 @@ const rawCountryData: Record<string, RawCountryDatum> = {
   ST: {
     isoCountryCode: "ST",
     countryName: "Sao Tome And Principe",
-    population: "175808",
+    population: "211028",
     sovereigntyLevel: SovereigntyLevel.UNMemberState,
   },
   SA: {
@@ -1262,6 +1268,12 @@ const rawCountryData: Record<string, RawCountryDatum> = {
     population: "10112453",
     sovereigntyLevel: SovereigntyLevel.UNMemberState,
   },
+  SS: {
+    isoCountryCode: "SS",
+    countryName: "South Sudan",
+    population: "12778250",
+    sovereigntyLevel: SovereigntyLevel.UNMemberState,
+  },
   ZA: {
     isoCountryCode: "ZA",
     countryName: "South Africa",
@@ -1290,7 +1302,7 @@ const rawCountryData: Record<string, RawCountryDatum> = {
   SD: {
     isoCountryCode: "SD",
     countryName: "Sudan",
-    population: "35000000",
+    population: "41592539",
     sovereigntyLevel: SovereigntyLevel.UNMemberState,
   },
   SR: {
