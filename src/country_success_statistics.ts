@@ -53,7 +53,8 @@ export async function updateCountryStatistics(
     }),
   });
 
-  return await response.json();
+  const newSuccessStatistics = await response.json();
+  countrySuccessStatisticsMap[isoCountryCode] = newSuccessStatistics;
 }
 
 export function lowestRankCountry(
