@@ -356,6 +356,7 @@ const rawCountryData: Record<string, RawCountryDatum> = {
     countryName: "Curaçao",
     population: "158665",
     sovereigntyLevel: SovereigntyLevel.Territory,
+    parentCountry: "NL",
   },
   HR: {
     isoCountryCode: "HR",
@@ -1279,6 +1280,13 @@ const rawCountryData: Record<string, RawCountryDatum> = {
     countryName: "South Sudan",
     population: "12778250",
     sovereigntyLevel: SovereigntyLevel.UNMemberState,
+  },
+  SX: {
+    isoCountryCode: "SX",
+    countryName: "Sint Maarten",
+    population: "41486",
+    sovereigntyLevel: SovereigntyLevel.Territory,
+    parentCountry: "NL",
   },
   ZA: {
     isoCountryCode: "ZA",
