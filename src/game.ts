@@ -1,5 +1,5 @@
 import { getCountryData, CountryDatum, SovereigntyLevel } from "./country_data";
-import { WorldMap } from "./world_map";
+import WorldMap from "./world_map";
 import * as CountryStatistics from "./country_success_statistics";
 
 const COUNTRY_POPULATION_MINIMUM = 200_000;

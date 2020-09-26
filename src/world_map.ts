@@ -1,8 +1,19 @@
-export class WorldMap {
+export default class WorldMap {
   worldMapObjectEl: HTMLObjectElement;
   worldMapDocument: Document;
   // TODO: This should be SVGElement?
   worldMapSVGEl: HTMLElement;
+
+  static load(): Promise<WorldMap> {
+    const worldMapObjectEl = document.getElementById(
+      "world-map"
+    ) as HTMLObjectElement;
+    return new Promise<WorldMap>((resolve, reject) => {
+      worldMapObjectEl.addEventListener("load", () => {
+        resolve(new WorldMap(worldMapObjectEl));
+      });
+    });
+  }
 
   constructor(worldMapObjectEl: HTMLObjectElement) {
     this.worldMapObjectEl = worldMapObjectEl;
@@ -67,15 +78,4 @@ export class WorldMap {
       handler(clickedCountryCode);
     });
   }
-}
-
-export async function awaitWorldMapLoad(): Promise<WorldMap> {
-  const worldMapObjectEl = document.getElementById(
-    "world-map"
-  ) as HTMLObjectElement;
-  return new Promise<WorldMap>((resolve, reject) => {
-    worldMapObjectEl.addEventListener("load", () => {
-      resolve(new WorldMap(worldMapObjectEl));
-    });
-  });
 }
