@@ -10,19 +10,30 @@ export class Game {
   worldMap: WorldMap;
 
   constructor(worldMap: WorldMap) {
-    this.allCountries = getCountryData((countryDatum) => {
+    this.allCountries = new Map();
+
+    const countriesToHide: Array<string> = [];
+    for (const countryDatum of getCountryData().values()) {
+      // Don't play with very small population countries.
       if (countryDatum.population < COUNTRY_POPULATION_MINIMUM) {
-        return false;
+        countriesToHide.push(countryDatum.isoCountryCode);
+        continue;
       }
 
+      // Don't play with countries that aren't sovereign.
       if (countryDatum.sovereigntyLevel === SovereigntyLevel.Territory) {
-        return false;
+        countriesToHide.push(countryDatum.isoCountryCode);
+        continue;
       }
 
-      return true;
-    });
+      this.allCountries.set(countryDatum.isoCountryCode, countryDatum);
+    }
+
     this.allCountryKeys = Array.from(this.allCountries.keys());
     this.worldMap = worldMap;
+
+    // Hide circles for countries we won't be playing with.
+    this.worldMap.hideCountryCircles(countriesToHide);
 
     this.startNextTurn();
 

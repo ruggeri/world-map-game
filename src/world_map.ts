@@ -24,6 +24,24 @@ export class WorldMap {
     this.worldMapSVGEl.appendChild(newStyleElement);
   }
 
+  hideCountryCircles(isoCountryCodes: Array<string>) {
+    const newStyleElement = this.worldMapDocument.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "style"
+    );
+
+    const selector = isoCountryCodes
+      .map((isoCode) => `circle.${isoCode.toLowerCase()}`)
+      .join(", ");
+    newStyleElement.textContent = `
+      ${selector} {
+        opacity: 0;
+      }
+    `;
+
+    this.worldMapSVGEl.appendChild(newStyleElement);
+  }
+
   clearCountryColors() {
     const styleTags = this.worldMapDocument.getElementsByTagName("style");
     for (let idx = 1; idx < styleTags.length; idx++) {

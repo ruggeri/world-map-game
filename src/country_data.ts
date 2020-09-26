@@ -1530,9 +1530,7 @@ const rawCountryData: Record<string, RawCountryDatum> = {
   },
 };
 
-export function getCountryData(
-  keepFilter: (cd: CountryDatum) => boolean
-): Map<string, CountryDatum> {
+export function getCountryData(): Map<string, CountryDatum> {
   const countryDataMap = new Map();
 
   for (const countryName of Object.keys(rawCountryData)) {
@@ -1542,9 +1540,7 @@ export function getCountryData(
       population: Number(rawCountryDatum.population),
     };
 
-    if (keepFilter(countryDatum)) {
-      countryDataMap.set(countryDatum.isoCountryCode, countryDatum);
-    }
+    countryDataMap.set(countryDatum.isoCountryCode, countryDatum);
   }
 
   return countryDataMap;
