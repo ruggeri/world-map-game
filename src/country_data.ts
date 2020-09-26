@@ -1533,8 +1533,7 @@ const rawCountryData: Record<string, RawCountryDatum> = {
 export function getCountryData(): Map<string, CountryDatum> {
   const countryDataMap = new Map();
 
-  for (const countryName of Object.keys(rawCountryData)) {
-    const rawCountryDatum = rawCountryData[countryName];
+  for (const rawCountryDatum of Object.values(rawCountryData)) {
     const countryDatum: CountryDatum = {
       ...rawCountryDatum,
       population: Number(rawCountryDatum.population),

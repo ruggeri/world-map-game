@@ -1,5 +1,10 @@
 import { getCountryData, CountryDatum, SovereigntyLevel } from "./country_data";
 import { WorldMap } from "./world_map";
+import {
+  getCountryStatistics,
+  markCountryCorrect,
+  markCountryIncorrect,
+} from "./country_success_statistics";
 
 const COUNTRY_POPULATION_MINIMUM = 200_000;
 
@@ -49,6 +54,7 @@ export class Game {
   startNextTurn() {
     this.targetCountry = this.pickRandomCountry();
     console.log(`Find ${this.targetCountry.countryName}`);
+    console.log(getCountryStatistics(this.targetCountry.isoCountryCode));
   }
 
   attemptGuess(guessedCountryCode: string) {
@@ -56,7 +62,10 @@ export class Game {
 
     if (this.targetCountry.isoCountryCode === guessedCountryCode) {
       this.worldMap.setCountryColor(this.targetCountry.isoCountryCode, "green");
+      markCountryCorrect(this.targetCountry.isoCountryCode);
       this.startNextTurn();
+    } else {
+      markCountryIncorrect(this.targetCountry.isoCountryCode);
     }
   }
 }
