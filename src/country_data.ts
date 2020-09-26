@@ -351,6 +351,12 @@ const rawCountryData: Record<string, RawCountryDatum> = {
     population: "21058798",
     sovereigntyLevel: SovereigntyLevel.UNMemberState,
   },
+  CW: {
+    isoCountryCode: "CW",
+    countryName: "Curaçao",
+    population: "158665",
+    sovereigntyLevel: SovereigntyLevel.Territory,
+  },
   HR: {
     isoCountryCode: "HR",
     countryName: "Croatia",
