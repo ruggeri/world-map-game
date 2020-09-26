@@ -1,17 +1,19 @@
-import { getCountryData } from "./country_data";
+import { CountryDatum, getCountryData } from "./country_data";
 
 interface CountrySuccessStatistics {
+  isoCountryCode: string;
   timesGuessedCorrectly: number;
   timesGuessedIncorrectly: number;
 }
 
 let countrySuccessStatisticsMap: Map<string, CountrySuccessStatistics>;
 
-function initializeCountrySuccessStatistics() {
+export function initializeCountrySuccessStatistics() {
   console.log("initializing country success statistics map");
   countrySuccessStatisticsMap = new Map();
   for (const countryDatum of getCountryData().values()) {
     countrySuccessStatisticsMap.set(countryDatum.isoCountryCode, {
+      isoCountryCode: countryDatum.isoCountryCode,
       timesGuessedCorrectly: 0,
       timesGuessedIncorrectly: 0,
     });
@@ -78,4 +80,35 @@ export function markCountryIncorrect(countryCode: string) {
   const countrySuccessStatistics = getCountryStatistics(countryCode);
   countrySuccessStatistics.timesGuessedIncorrectly++;
   saveCountrySuccessStatisticsMap();
+}
+
+export function lowestRankCountry(
+  allCountries: Map<string, CountryDatum>,
+  pseudocounts: number
+): string {
+  if (!countrySuccessStatisticsMap) {
+    loadCountrySuccessStatisticsMap();
+  }
+
+  let lowestCountryCode: string | null = null;
+  let lowestCountryPercentage: number | null = null;
+  for (const countryCode of allCountries.keys()) {
+    const countryStatistics = getCountryStatistics(countryCode);
+    const countryPercentage =
+      countryStatistics.timesGuessedCorrectly /
+      (countryStatistics.timesGuessedIncorrectly +
+        countryStatistics.timesGuessedCorrectly +
+        pseudocounts);
+
+    if (
+      lowestCountryCode === null ||
+      lowestCountryPercentage === null ||
+      countryPercentage < lowestCountryPercentage
+    ) {
+      lowestCountryCode = countryStatistics.isoCountryCode;
+      lowestCountryPercentage = countryPercentage;
+    }
+  }
+  console.log(lowestCountryCode);
+  return lowestCountryCode!;
 }

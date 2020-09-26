@@ -1,16 +1,12 @@
 import { getCountryData, CountryDatum, SovereigntyLevel } from "./country_data";
 import { WorldMap } from "./world_map";
-import {
-  getCountryStatistics,
-  markCountryCorrect,
-  markCountryIncorrect,
-} from "./country_success_statistics";
+import * as CountryStatistics from "./country_success_statistics";
 
 const COUNTRY_POPULATION_MINIMUM = 200_000;
 
 export class Game {
   allCountries: Map<string, CountryDatum>;
-  allCountryKeys: Array<string>;
+  allCountryCodes: Array<string>;
   targetCountry!: CountryDatum;
   worldMap: WorldMap;
 
@@ -34,7 +30,7 @@ export class Game {
       this.allCountries.set(countryDatum.isoCountryCode, countryDatum);
     }
 
-    this.allCountryKeys = Array.from(this.allCountries.keys());
+    this.allCountryCodes = Array.from(this.allCountries.keys());
     this.worldMap = worldMap;
 
     // Hide circles for countries we won't be playing with.
@@ -46,15 +42,25 @@ export class Game {
   }
 
   pickRandomCountry(): CountryDatum {
-    const idx = Math.floor(Math.random() * this.allCountryKeys.length);
-    const countryKey = this.allCountryKeys[idx];
-    return this.allCountries.get(countryKey)!;
+    const idx = Math.floor(Math.random() * this.allCountryCodes.length);
+    const countryCode = this.allCountryCodes[idx];
+    return this.allCountries.get(countryCode)!;
+  }
+
+  pickLowestRankCountry(): CountryDatum {
+    const countryCode = CountryStatistics.lowestRankCountry(
+      this.allCountries,
+      1
+    );
+    return this.allCountries.get(countryCode)!;
   }
 
   startNextTurn() {
-    this.targetCountry = this.pickRandomCountry();
+    this.targetCountry = this.pickLowestRankCountry();
     console.log(`Find ${this.targetCountry.countryName}`);
-    console.log(getCountryStatistics(this.targetCountry.isoCountryCode));
+    console.log(
+      CountryStatistics.getCountryStatistics(this.targetCountry.isoCountryCode)
+    );
   }
 
   attemptGuess(guessedCountryCode: string) {
@@ -62,10 +68,10 @@ export class Game {
 
     if (this.targetCountry.isoCountryCode === guessedCountryCode) {
       this.worldMap.setCountryColor(this.targetCountry.isoCountryCode, "green");
-      markCountryCorrect(this.targetCountry.isoCountryCode);
+      CountryStatistics.markCountryCorrect(this.targetCountry.isoCountryCode);
       this.startNextTurn();
     } else {
-      markCountryIncorrect(this.targetCountry.isoCountryCode);
+      CountryStatistics.markCountryIncorrect(this.targetCountry.isoCountryCode);
     }
   }
 }
