@@ -1,54 +1,63 @@
-function getWorldMapObjectEl(): HTMLObjectElement {
-  return document.getElementById("world-map") as HTMLObjectElement;
-}
+export class WorldMap {
+  worldMapObjectEl: HTMLObjectElement;
+  worldMapDocument: Document;
+  // TODO: This should be SVGElement?
+  worldMapSVGEl: HTMLElement;
 
-function getWorldMapDocument(): Document {
-  return getWorldMapObjectEl().contentDocument as Document;
-}
-
-export async function awaitWorldMapLoad() {
-  await new Promise((resolve, reject) => {
-    getWorldMapObjectEl().addEventListener("load", resolve);
-  });
-}
-
-export function setCountryColor(isoCountryCode: string, color: string) {
-  const newStyleElement = getWorldMapDocument().createElementNS(
-    "http://www.w3.org/2000/svg",
-    "style"
-  );
-  newStyleElement.textContent = `
-    .${isoCountryCode.toLowerCase()} {
-      fill: ${color};
-    }
-  `;
-
-  getWorldMapDocument().documentElement.appendChild(newStyleElement);
-}
-
-export function clearCountryColors() {
-  const styleTags = getWorldMapDocument().getElementsByTagName("style");
-  for (let idx = 1; idx < styleTags.length; idx++) {
-    styleTags[idx].remove();
-  }
-}
-
-function getCountryCodeForElement(targetElement: HTMLElement): string {
-  const svgEl = getWorldMapDocument().documentElement;
-  if (targetElement.parentElement !== svgEl) {
-    return getCountryCodeForElement(targetElement.parentElement as HTMLElement);
+  constructor(worldMapObjectEl: HTMLObjectElement) {
+    this.worldMapObjectEl = worldMapObjectEl;
+    this.worldMapDocument = worldMapObjectEl.contentDocument as Document;
+    this.worldMapSVGEl = this.worldMapDocument.documentElement;
   }
 
-  return targetElement.id.toUpperCase();
-}
-
-export function setWorldMapClickHandler(handler: (s: string) => void) {
-  const svgEl = getWorldMapDocument().documentElement;
-
-  svgEl.addEventListener("click", (e: Event) => {
-    const clickedCountryCode = getCountryCodeForElement(
-      e.target as HTMLElement
+  setCountryColor(isoCountryCode: string, color: string) {
+    const newStyleElement = this.worldMapDocument.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "style"
     );
-    handler(clickedCountryCode);
+    newStyleElement.textContent = `
+      .${isoCountryCode.toLowerCase()} {
+        fill: ${color};
+      }
+    `;
+
+    this.worldMapSVGEl.appendChild(newStyleElement);
+  }
+
+  clearCountryColors() {
+    const styleTags = this.worldMapDocument.getElementsByTagName("style");
+    for (let idx = 1; idx < styleTags.length; idx++) {
+      styleTags[idx].remove();
+    }
+  }
+
+  getCountryCodeForElement(targetElement: HTMLElement): string {
+    if (targetElement.parentElement !== this.worldMapSVGEl) {
+      return this.getCountryCodeForElement(
+        targetElement.parentElement as HTMLElement
+      );
+    }
+
+    return targetElement.id.toUpperCase();
+  }
+
+  setWorldMapClickHandler(handler: (clickedCountryCode: string) => void) {
+    this.worldMapSVGEl.addEventListener("click", (e: Event) => {
+      const clickedCountryCode = this.getCountryCodeForElement(
+        e.target as HTMLElement
+      );
+      handler(clickedCountryCode);
+    });
+  }
+}
+
+export async function awaitWorldMapLoad(): Promise<WorldMap> {
+  const worldMapObjectEl = document.getElementById(
+    "world-map"
+  ) as HTMLObjectElement;
+  return new Promise<WorldMap>((resolve, reject) => {
+    worldMapObjectEl.addEventListener("load", () => {
+      resolve(new WorldMap(worldMapObjectEl));
+    });
   });
 }
