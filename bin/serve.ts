@@ -1,3 +1,5 @@
+#!/usr/bin/env npx ts-node
+
 import bodyParser from "body-parser";
 import fs from "fs";
 import express from "express";
