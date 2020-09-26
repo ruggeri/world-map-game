@@ -1,8 +1,8 @@
 import bodyParser from "body-parser";
 import fs from "fs";
 import express from "express";
+import os from "os";
 import { CountrySuccessStatistics } from "../src/country_success_statistics";
-import { count } from "console";
 
 const app = express();
 
@@ -21,7 +21,8 @@ app.get("/World Map.svg", (req, res) => {
   res.sendFile("./dist/World Map.svg");
 });
 
-const statsFilename = "./dist/country-success-statistics.json";
+const username = os.userInfo().username;
+const statsFilename = `./dist/${username}-country-success-statistics.json`;
 let countrySuccessStatisticsMap: Record<string, CountrySuccessStatistics> = {};
 try {
   countrySuccessStatisticsMap = JSON.parse(
@@ -60,9 +61,11 @@ app.post("/country-success-statistics", async (req, res) => {
 
   fs.writeFile(
     statsFilename,
-    JSON.stringify(countrySuccessStatisticsMap),
+    JSON.stringify(countrySuccessStatisticsMap, null, 2),
     (err) => {
-      console.log(err);
+      if (err) {
+        console.log(err);
+      }
     }
   );
 

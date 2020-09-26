@@ -1,0 +1,22 @@
+{
+  "AF": {
+    "isoCountryCode": "AF",
+    "timesGuessedCorrectly": 1,
+    "timesGuessedIncorrectly": 0
+  },
+  "AL": {
+    "isoCountryCode": "AL",
+    "timesGuessedCorrectly": 1,
+    "timesGuessedIncorrectly": 0
+  },
+  "DZ": {
+    "isoCountryCode": "DZ",
+    "timesGuessedCorrectly": 1,
+    "timesGuessedIncorrectly": 0
+  },
+  "AO": {
+    "isoCountryCode": "AO",
+    "timesGuessedCorrectly": 1,
+    "timesGuessedIncorrectly": 1
+  }
+}
