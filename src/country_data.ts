@@ -1,3 +1,269 @@
+export enum IsoCountryCode {
+  AD = "AD",
+  AE = "AE",
+  AF = "AF",
+  AG = "AG",
+  AI = "AI",
+  AL = "AL",
+  AM = "AM",
+  AO = "AO",
+  AR = "AR",
+  AS = "AS",
+  AT = "AT",
+  AU = "AU",
+  AW = "AW",
+  AX = "AX",
+  AZ = "AZ",
+  BA = "BA",
+  BB = "BB",
+  BD = "BD",
+  BE = "BE",
+  BF = "BF",
+  BG = "BG",
+  BH = "BH",
+  BI = "BI",
+  BJ = "BJ",
+  BL = "BL",
+  BM = "BM",
+  BN = "BN",
+  BO = "BO",
+  BR = "BR",
+  BS = "BS",
+  BT = "BT",
+  BV = "BV",
+  BW = "BW",
+  BY = "BY",
+  BZ = "BZ",
+  CA = "CA",
+  CC = "CC",
+  CD = "CD",
+  CF = "CF",
+  CG = "CG",
+  CH = "CH",
+  CI = "CI",
+  CK = "CK",
+  CL = "CL",
+  CM = "CM",
+  CN = "CN",
+  CO = "CO",
+  CR = "CR",
+  CU = "CU",
+  CV = "CV",
+  CW = "CW",
+  CX = "CX",
+  CY = "CY",
+  CZ = "CZ",
+  DE = "DE",
+  DJ = "DJ",
+  DK = "DK",
+  DM = "DM",
+  DO = "DO",
+  DZ = "DZ",
+  EC = "EC",
+  EE = "EE",
+  EG = "EG",
+  EH = "EH",
+  ER = "ER",
+  ES = "ES",
+  ET = "ET",
+  FI = "FI",
+  FJ = "FJ",
+  FK = "FK",
+  FM = "FM",
+  FO = "FO",
+  FR = "FR",
+  GA = "GA",
+  GB = "GB",
+  GD = "GD",
+  GE = "GE",
+  GF = "GF",
+  GG = "GG",
+  GH = "GH",
+  GI = "GI",
+  GL = "GL",
+  GM = "GM",
+  GN = "GN",
+  GP = "GP",
+  GQ = "GQ",
+  GR = "GR",
+  GS = "GS",
+  GT = "GT",
+  GU = "GU",
+  GW = "GW",
+  GY = "GY",
+  HK = "HK",
+  HM = "HM",
+  HN = "HN",
+  HR = "HR",
+  HT = "HT",
+  HU = "HU",
+  ID = "ID",
+  IE = "IE",
+  IL = "IL",
+  IM = "IM",
+  IN = "IN",
+  IO = "IO",
+  IQ = "IQ",
+  IR = "IR",
+  IS = "IS",
+  IT = "IT",
+  JE = "JE",
+  JM = "JM",
+  JO = "JO",
+  JP = "JP",
+  KE = "KE",
+  KG = "KG",
+  KH = "KH",
+  KI = "KI",
+  KM = "KM",
+  KN = "KN",
+  KP = "KP",
+  KR = "KR",
+  KW = "KW",
+  KY = "KY",
+  KZ = "KZ",
+  LA = "LA",
+  LB = "LB",
+  LC = "LC",
+  LI = "LI",
+  LK = "LK",
+  LR = "LR",
+  LS = "LS",
+  LT = "LT",
+  LU = "LU",
+  LV = "LV",
+  LY = "LY",
+  MA = "MA",
+  MC = "MC",
+  MD = "MD",
+  ME = "ME",
+  MF = "MF",
+  MG = "MG",
+  MH = "MH",
+  MK = "MK",
+  ML = "ML",
+  MM = "MM",
+  MN = "MN",
+  MO = "MO",
+  MP = "MP",
+  MQ = "MQ",
+  MR = "MR",
+  MS = "MS",
+  MT = "MT",
+  MU = "MU",
+  MV = "MV",
+  MW = "MW",
+  MX = "MX",
+  MY = "MY",
+  MZ = "MZ",
+  NA = "NA",
+  NC = "NC",
+  NE = "NE",
+  NF = "NF",
+  NG = "NG",
+  NI = "NI",
+  NL = "NL",
+  NO = "NO",
+  NP = "NP",
+  NR = "NR",
+  NU = "NU",
+  NZ = "NZ",
+  OM = "OM",
+  PA = "PA",
+  PE = "PE",
+  PF = "PF",
+  PG = "PG",
+  PH = "PH",
+  PK = "PK",
+  PL = "PL",
+  PM = "PM",
+  PN = "PN",
+  PR = "PR",
+  PS = "PS",
+  PT = "PT",
+  PW = "PW",
+  PY = "PY",
+  QA = "QA",
+  RE = "RE",
+  RO = "RO",
+  RS = "RS",
+  RU = "RU",
+  RW = "RW",
+  SA = "SA",
+  SB = "SB",
+  SC = "SC",
+  SD = "SD",
+  SE = "SE",
+  SG = "SG",
+  SH = "SH",
+  SI = "SI",
+  SJ = "SJ",
+  SK = "SK",
+  SL = "SL",
+  SM = "SM",
+  SN = "SN",
+  SO = "SO",
+  SR = "SR",
+  SS = "SS",
+  ST = "ST",
+  SV = "SV",
+  SX = "SX",
+  SY = "SY",
+  SZ = "SZ",
+  TC = "TC",
+  TD = "TD",
+  TF = "TF",
+  TG = "TG",
+  TH = "TH",
+  TJ = "TJ",
+  TK = "TK",
+  TL = "TL",
+  TM = "TM",
+  TN = "TN",
+  TO = "TO",
+  TR = "TR",
+  TT = "TT",
+  TV = "TV",
+  TW = "TW",
+  TZ = "TZ",
+  UA = "UA",
+  UG = "UG",
+  UM = "UM",
+  US = "US",
+  UY = "UY",
+  UZ = "UZ",
+  VA = "VA",
+  VC = "VC",
+  VE = "VE",
+  VG = "VG",
+  VI = "VI",
+  VN = "VN",
+  VU = "VU",
+  WF = "WF",
+  WS = "WS",
+  YE = "YE",
+  YT = "YT",
+  ZA = "ZA",
+  ZM = "ZM",
+  ZW = "ZW",
+}
+
+/**
+ * Pass in an ISO country code string (lower or upper case) to get an
+ * IsoCountryCoe.
+ */
+export function getCountryCode(isoCountryCodeStr: string): IsoCountryCode {
+  const isoCountryCode =
+    IsoCountryCode[
+      isoCountryCodeStr.toUpperCase() as keyof typeof IsoCountryCode
+    ];
+  if (isoCountryCode === undefined) {
+    throw new Error(`Country code ${isoCountryCodeStr} does not exist`);
+  }
+
+  return isoCountryCode;
+}
+
 export enum SovereigntyLevel {
   Disputed,
   Territory,
@@ -6,13 +272,17 @@ export enum SovereigntyLevel {
 }
 
 export interface CountryDatum {
-  isoCountryCode: string;
+  isoCountryCode: IsoCountryCode;
   countryName: string;
   population: number;
   sovereigntyLevel: SovereigntyLevel;
   parentCountry?: string;
 }
 
+/**
+ * The population is stored as a string because JavaScript doesn't have
+ * integers. Also isoCountryCode is just a string.
+ */
 interface RawCountryDatum {
   isoCountryCode: string;
   countryName: string;
@@ -21,8 +291,12 @@ interface RawCountryDatum {
   parentCountry?: string;
 }
 
+// JavaScript object representation of country data (with unparsed
+// populations).
 type CountryDataMapRecord = Record<string, RawCountryDatum>;
-type RawCountryDataMap = Map<string, CountryDatum>;
+// JavaScript Map representation of country data (with parsed
+// populations).
+type RawCountryDataMap = Map<IsoCountryCode, CountryDatum>;
 
 const rawCountryData: CountryDataMapRecord = {
   /* A */
@@ -1608,15 +1882,26 @@ const rawCountryData: CountryDataMapRecord = {
   },
 };
 
+/**
+ * `CountryDataMap` is the preferred way to access country data.
+ * Effectively a wrapper class.
+ */
 export class CountryDataMap {
-  countryDataMap: Map<string, CountryDatum>;
+  countryDataMap: RawCountryDataMap;
 
+  /**
+   * Builds and returns a `CountryDataMap` consisting of all the
+   * countries' data.
+   */
   static allDataMap(): CountryDataMap {
     const countryDataMap: RawCountryDataMap = new Map();
-    for (const isoCountryCode in rawCountryData) {
-      const rawCountryDatum = rawCountryData[isoCountryCode];
+    for (const isoCountryCodeStr in rawCountryData) {
+      const rawCountryDatum = rawCountryData[isoCountryCodeStr];
+      const isoCountryCode =
+        IsoCountryCode[isoCountryCodeStr as keyof typeof IsoCountryCode];
       const countryDatum: CountryDatum = {
         ...rawCountryDatum,
+        isoCountryCode,
         population: Number(rawCountryDatum.population),
       };
       countryDataMap.set(isoCountryCode, countryDatum);
@@ -1629,6 +1914,10 @@ export class CountryDataMap {
     this.countryDataMap = countryDataMap;
   }
 
+  /**
+   * Produces a `CountryDataMap` of only those countries that match the
+   * `filterFn`.
+   */
   filter(filterFn: (countryDatum: CountryDatum) => boolean): CountryDataMap {
     const filteredCountryDataMap: RawCountryDataMap = new Map();
     for (const countryDatum of this.countryDataMap.values()) {
@@ -1641,14 +1930,23 @@ export class CountryDataMap {
     return new CountryDataMap(filteredCountryDataMap);
   }
 
-  getDataForCode(isoCountryCode: string): CountryDatum | null {
-    return this.countryDataMap.get(isoCountryCode.toUpperCase()) || null;
+  /**
+   * Get data for the specified country.
+   */
+  getDataForCode(isoCountryCode: IsoCountryCode): CountryDatum | null {
+    return this.countryDataMap.get(isoCountryCode) || null;
   }
 
+  /**
+   * Return an iterator for all the keys in the `CountryDataMap`.
+   */
   keys() {
     return this.countryDataMap.keys();
   }
 
+  /**
+   * Return an iterator for the country data values in the map.
+   */
   [Symbol.iterator]() {
     return this.countryDataMap.values();
   }

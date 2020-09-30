@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "module": "commonjs",
     "outDir": "./dist/",
     "sourceMap": true,
     "strict": true,
-    "target": "es2020",
-    "esModuleInterop": true
+    "target": "es2020"
   },
   "include": ["./src/app.ts"]
 }

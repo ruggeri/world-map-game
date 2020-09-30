@@ -1,12 +1,21 @@
-import { CountryDataMap, CountryDatum, SovereigntyLevel } from "./country_data";
+import {
+  CountryDataMap,
+  CountryDatum,
+  getCountryCode,
+  IsoCountryCode,
+  SovereigntyLevel,
+} from "./country_data";
 import WorldMap from "./world_map";
 import CountrySuccessStatisticsMap from "./country_success_statistics";
 
 const COUNTRY_POPULATION_MINIMUM = 200_000;
 
+/**
+ * Represents the state of the country guessing game.
+ */
 export class Game {
   allCountries: CountryDataMap;
-  allCountryCodes: Array<string>;
+  allCountryCodes: Array<IsoCountryCode>;
   countryStatisticsMap: CountrySuccessStatisticsMap;
   targetCountry!: CountryDatum;
   worldMap: WorldMap;
@@ -16,7 +25,7 @@ export class Game {
     countryStatisticsMap: CountrySuccessStatisticsMap,
     worldMap: WorldMap
   ) {
-    const countriesToHide: Array<string> = [];
+    const countriesToHide: Array<IsoCountryCode> = [];
     this.allCountries = allCountries.filter(
       (countryDatum: CountryDatum): boolean => {
         // Don't play with very small population countries.
@@ -44,15 +53,26 @@ export class Game {
 
     this.startNextTurn();
 
-    worldMap.setWorldMapClickHandler(this.attemptGuess.bind(this));
+    // Set click handler on world map. When they click, it will trigger
+    // a guess for the game.
+    worldMap.setWorldMapClickHandler((countryCodeStr: string) => {
+      const isoCountryCode = getCountryCode(countryCodeStr);
+      this.attemptGuess(isoCountryCode);
+    });
   }
 
+  /**
+   * Returns a random country from the playing set.
+   */
   pickRandomCountry(): CountryDatum {
     const idx = Math.floor(Math.random() * this.allCountryCodes.length);
     const countryCode = this.allCountryCodes[idx];
     return this.allCountries.getDataForCode(countryCode)!;
   }
 
+  /**
+   * Picks the country with the lowest success statistics.
+   */
   pickLowestRankCountry(): CountryDatum {
     const countryCode = this.countryStatisticsMap.lowestRankCountry(
       this.allCountries,
@@ -61,6 +81,10 @@ export class Game {
     return this.allCountries.getDataForCode(countryCode)!;
   }
 
+  /**
+   * Starts the next turn of the game by picking the country with the
+   * lowest statistics.
+   */
   startNextTurn() {
     this.targetCountry = this.pickLowestRankCountry();
     console.log(`Find ${this.targetCountry.countryName}`);
@@ -71,7 +95,10 @@ export class Game {
     );
   }
 
-  async attemptGuess(guessedCountryCode: string) {
+  /**
+   * Call `attemptGuess` to record a guess.
+   */
+  async attemptGuess(guessedCountryCode: IsoCountryCode) {
     console.log(`You clicked: ${guessedCountryCode}`);
 
     if (this.targetCountry.isoCountryCode === guessedCountryCode) {

@@ -1,3 +1,5 @@
+import { getCountryCode, IsoCountryCode } from "./country_data";
+
 export default class WorldMap {
   worldMapObjectEl: HTMLObjectElement;
   worldMapDocument: Document;
@@ -27,7 +29,7 @@ export default class WorldMap {
     this.worldMapSVGEl = this.worldMapDocument.documentElement;
   }
 
-  setCountryColor(isoCountryCode: string, color: string) {
+  setCountryColor(isoCountryCode: IsoCountryCode, color: string) {
     const newStyleElement = this.worldMapDocument.createElementNS(
       "http://www.w3.org/2000/svg",
       "style"
@@ -41,7 +43,7 @@ export default class WorldMap {
     this.worldMapSVGEl.appendChild(newStyleElement);
   }
 
-  hideCountryCircles(isoCountryCodes: Array<string>) {
+  hideCountryCircles(isoCountryCodes: Array<IsoCountryCode>) {
     const newStyleElement = this.worldMapDocument.createElementNS(
       "http://www.w3.org/2000/svg",
       "style"
@@ -66,22 +68,30 @@ export default class WorldMap {
     }
   }
 
-  getCountryCodeForElement(targetElement: HTMLElement): string {
+  getCountryCodeForElement(targetElement: HTMLElement): IsoCountryCode | null {
     if (targetElement.parentElement !== this.worldMapSVGEl) {
       return this.getCountryCodeForElement(
         targetElement.parentElement as HTMLElement
       );
     }
 
-    return targetElement.id.toUpperCase();
+    try {
+      return getCountryCode(targetElement.id);
+    } catch {
+      return null;
+    }
   }
 
-  setWorldMapClickHandler(handler: (clickedCountryCode: string) => void) {
+  setWorldMapClickHandler(
+    handler: (clickedCountryCode: IsoCountryCode) => void
+  ) {
     this.worldMapSVGEl.addEventListener("click", (e: Event) => {
       const clickedCountryCode = this.getCountryCodeForElement(
         e.target as HTMLElement
       );
-      handler(clickedCountryCode);
+      if (clickedCountryCode) {
+        handler(clickedCountryCode);
+      }
     });
   }
 }

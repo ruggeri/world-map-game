@@ -1,26 +1,51 @@
-import CountryDataMap from "./country_data";
+import { CountryDataMap, getCountryCode, IsoCountryCode } from "./country_data";
 
+/**
+ * `CountrySuccessStatistics` records how many times a country has been
+ * guessed correctly/incorrectly.
+ */
 export interface CountrySuccessStatistics {
-  isoCountryCode: string;
+  isoCountryCode: IsoCountryCode;
   timesGuessedCorrectly: number;
   timesGuessedIncorrectly: number;
 }
 
+/**
+ * `CountrySuccessStatisticsRecord` is the type of the JSON payload
+ * we'll be sent from the server.
+ */
 type CountrySuccessStatisticsRecord = Record<string, CountrySuccessStatistics>;
-type RawCountrySuccessStatisticsMap = Map<string, CountrySuccessStatistics>;
+/**
+ * `RawCountrySuccessStatisticsMap` is the 'inner' type that will be
+ * wrapped by `CountrySuccessStatisticsMap`.
+ */
+type RawCountrySuccessStatisticsMap = Map<
+  IsoCountryCode,
+  CountrySuccessStatistics
+>;
 
+/**
+ * Wrapper class that stores `CountrySuccessStatistics` for each
+ * country.
+ */
 export class CountrySuccessStatisticsMap {
   countrySuccessStatisticsMap: RawCountrySuccessStatisticsMap;
 
+  /**
+   * `fetchMapFromServer` fetches the success data from the server.
+   */
   static async fetchMapFromServer(): Promise<CountrySuccessStatisticsMap> {
+    // Fetch and parse data.
     const serverCountrySuccessStatisticsRecord = (await (
       await fetch("country-success-statistics")
     ).json()) as CountrySuccessStatisticsRecord;
 
-    const countrySuccessStatisticsMap = new Map();
-    for (const isoCountryCode in serverCountrySuccessStatisticsRecord) {
+    // Convert it from JSON object to Map.
+    const countrySuccessStatisticsMap: RawCountrySuccessStatisticsMap = new Map();
+    for (const isoCountryCodeStr in serverCountrySuccessStatisticsRecord) {
       const countrySuccessStatistics =
-        serverCountrySuccessStatisticsRecord[isoCountryCode];
+        serverCountrySuccessStatisticsRecord[isoCountryCodeStr];
+      const isoCountryCode = getCountryCode(isoCountryCodeStr);
       countrySuccessStatisticsMap.set(isoCountryCode, countrySuccessStatistics);
     }
 
@@ -31,15 +56,20 @@ export class CountrySuccessStatisticsMap {
     this.countrySuccessStatisticsMap = countrySuccessStatisticsMap;
   }
 
-  statisticsForCode(isoCountryCode: string): CountrySuccessStatistics {
+  /**
+   * Gets statistics for the specified country.
+   */
+  statisticsForCode(isoCountryCode: IsoCountryCode): CountrySuccessStatistics {
     const countrySuccessStatistics = this.countrySuccessStatisticsMap.get(
-      isoCountryCode.toUpperCase()
+      isoCountryCode
     );
 
-    if (countrySuccessStatistics) {
+    if (countrySuccessStatistics !== undefined) {
       return countrySuccessStatistics;
     }
 
+    // If we have no data recorded for this country, then it has been
+    // guessed correctly/incorrectly zero times.
     return {
       isoCountryCode,
       timesGuessedCorrectly: 0,
@@ -47,7 +77,14 @@ export class CountrySuccessStatisticsMap {
     };
   }
 
-  async update(isoCountryCode: string, direction: "correct" | "incorrect") {
+  /**
+   * Makes an AJAX request to update the statistics for this country.
+   */
+  async update(
+    isoCountryCode: IsoCountryCode,
+    direction: "correct" | "incorrect"
+  ): Promise<void> {
+    // Make the AJAX request to update the statistics.
     const response = await fetch("country-success-statistics", {
       method: "POST",
       headers: {
@@ -59,15 +96,21 @@ export class CountrySuccessStatisticsMap {
       }),
     });
 
-    const newSuccessStatistics = await response.json();
+    // The server will send us the most recent statistics.
+    const newSuccessStatistics = (await response.json()) as CountrySuccessStatistics;
+    // Update our statistics map with the new data.
     this.countrySuccessStatisticsMap.set(isoCountryCode, newSuccessStatistics);
   }
 
+  /**
+   * Finds the country in `allCountries` with the lowest ranked
+   * statistics. Smooths percentage correct by using pseudocounts.
+   */
   lowestRankCountry(
     allCountries: CountryDataMap,
     pseudocounts: number
-  ): string {
-    let lowestCountryCode: string | null = null;
+  ): IsoCountryCode {
+    let lowestCountryCode: IsoCountryCode | null = null;
     let lowestCountryPercentage: number | null = null;
     for (const countryDatum of allCountries) {
       const isoCountryCode = countryDatum.isoCountryCode;
@@ -80,7 +123,6 @@ export class CountrySuccessStatisticsMap {
           pseudocounts);
 
       if (
-        lowestCountryCode === null ||
         lowestCountryPercentage === null ||
         countryPercentage < lowestCountryPercentage
       ) {
