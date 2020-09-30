@@ -1,887 +1,887 @@
 {
   "AF": {
     "isoCountryCode": "AF",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "AL": {
     "isoCountryCode": "AL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "DZ": {
     "isoCountryCode": "DZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "AO": {
     "isoCountryCode": "AO",
-    "timesGuessedCorrectly": 5,
-    "timesGuessedIncorrectly": 1
+    "timesGuessedCorrectly": 10,
+    "timesGuessedIncorrectly": 2
   },
   "AR": {
     "isoCountryCode": "AR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "AM": {
     "isoCountryCode": "AM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "AU": {
     "isoCountryCode": "AU",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "AT": {
     "isoCountryCode": "AT",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   },
   "AZ": {
     "isoCountryCode": "AZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BS": {
     "isoCountryCode": "BS",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BH": {
     "isoCountryCode": "BH",
-    "timesGuessedCorrectly": 9,
+    "timesGuessedCorrectly": 13,
     "timesGuessedIncorrectly": 3
   },
   "BD": {
     "isoCountryCode": "BD",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BB": {
     "isoCountryCode": "BB",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   },
   "BY": {
     "isoCountryCode": "BY",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BE": {
     "isoCountryCode": "BE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BZ": {
     "isoCountryCode": "BZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BJ": {
     "isoCountryCode": "BJ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BT": {
     "isoCountryCode": "BT",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BO": {
     "isoCountryCode": "BO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BA": {
     "isoCountryCode": "BA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BW": {
     "isoCountryCode": "BW",
-    "timesGuessedCorrectly": 5,
+    "timesGuessedCorrectly": 7,
     "timesGuessedIncorrectly": 1
   },
   "BR": {
     "isoCountryCode": "BR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BN": {
     "isoCountryCode": "BN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BG": {
     "isoCountryCode": "BG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BF": {
     "isoCountryCode": "BF",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "BI": {
     "isoCountryCode": "BI",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CV": {
     "isoCountryCode": "CV",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KH": {
     "isoCountryCode": "KH",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CM": {
     "isoCountryCode": "CM",
-    "timesGuessedCorrectly": 5,
-    "timesGuessedIncorrectly": 1
+    "timesGuessedCorrectly": 10,
+    "timesGuessedIncorrectly": 2
   },
   "CA": {
     "isoCountryCode": "CA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CF": {
     "isoCountryCode": "CF",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TD": {
     "isoCountryCode": "TD",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CL": {
     "isoCountryCode": "CL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CN": {
     "isoCountryCode": "CN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CO": {
     "isoCountryCode": "CO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KM": {
     "isoCountryCode": "KM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CG": {
     "isoCountryCode": "CG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CD": {
     "isoCountryCode": "CD",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CR": {
     "isoCountryCode": "CR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CI": {
     "isoCountryCode": "CI",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "HR": {
     "isoCountryCode": "HR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CU": {
     "isoCountryCode": "CU",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CY": {
     "isoCountryCode": "CY",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CZ": {
     "isoCountryCode": "CZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "DK": {
     "isoCountryCode": "DK",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "DJ": {
     "isoCountryCode": "DJ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "DO": {
     "isoCountryCode": "DO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "EC": {
     "isoCountryCode": "EC",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "EG": {
     "isoCountryCode": "EG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SV": {
     "isoCountryCode": "SV",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GQ": {
     "isoCountryCode": "GQ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ER": {
     "isoCountryCode": "ER",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "EE": {
     "isoCountryCode": "EE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ET": {
     "isoCountryCode": "ET",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "FJ": {
     "isoCountryCode": "FJ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "FI": {
     "isoCountryCode": "FI",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "FR": {
     "isoCountryCode": "FR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GA": {
     "isoCountryCode": "GA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GM": {
     "isoCountryCode": "GM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GE": {
     "isoCountryCode": "GE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "DE": {
     "isoCountryCode": "DE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GH": {
     "isoCountryCode": "GH",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GR": {
     "isoCountryCode": "GR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GT": {
     "isoCountryCode": "GT",
-    "timesGuessedCorrectly": 7,
+    "timesGuessedCorrectly": 10,
     "timesGuessedIncorrectly": 2
   },
   "GN": {
     "isoCountryCode": "GN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GW": {
     "isoCountryCode": "GW",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GY": {
     "isoCountryCode": "GY",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   },
   "HT": {
     "isoCountryCode": "HT",
-    "timesGuessedCorrectly": 5,
+    "timesGuessedCorrectly": 7,
     "timesGuessedIncorrectly": 1
   },
   "HN": {
     "isoCountryCode": "HN",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   },
   "HU": {
     "isoCountryCode": "HU",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "IS": {
     "isoCountryCode": "IS",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "IN": {
     "isoCountryCode": "IN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ID": {
     "isoCountryCode": "ID",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "IR": {
     "isoCountryCode": "IR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "IQ": {
     "isoCountryCode": "IQ",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   },
   "IE": {
     "isoCountryCode": "IE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "IL": {
     "isoCountryCode": "IL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "IT": {
     "isoCountryCode": "IT",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "JM": {
     "isoCountryCode": "JM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "JP": {
     "isoCountryCode": "JP",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "JO": {
     "isoCountryCode": "JO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KZ": {
     "isoCountryCode": "KZ",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   },
   "KE": {
     "isoCountryCode": "KE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KR": {
     "isoCountryCode": "KR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KW": {
     "isoCountryCode": "KW",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KG": {
     "isoCountryCode": "KG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LA": {
     "isoCountryCode": "LA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LV": {
     "isoCountryCode": "LV",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LB": {
     "isoCountryCode": "LB",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LS": {
     "isoCountryCode": "LS",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LR": {
     "isoCountryCode": "LR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LY": {
     "isoCountryCode": "LY",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LT": {
     "isoCountryCode": "LT",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LU": {
     "isoCountryCode": "LU",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MK": {
     "isoCountryCode": "MK",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MG": {
     "isoCountryCode": "MG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MW": {
     "isoCountryCode": "MW",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MY": {
     "isoCountryCode": "MY",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MV": {
     "isoCountryCode": "MV",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ML": {
     "isoCountryCode": "ML",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MT": {
     "isoCountryCode": "MT",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MR": {
     "isoCountryCode": "MR",
-    "timesGuessedCorrectly": 7,
+    "timesGuessedCorrectly": 10,
     "timesGuessedIncorrectly": 2
   },
   "MU": {
     "isoCountryCode": "MU",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MX": {
     "isoCountryCode": "MX",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MD": {
     "isoCountryCode": "MD",
-    "timesGuessedCorrectly": 5,
+    "timesGuessedCorrectly": 7,
     "timesGuessedIncorrectly": 1
   },
   "MN": {
     "isoCountryCode": "MN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ME": {
     "isoCountryCode": "ME",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MA": {
     "isoCountryCode": "MA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MZ": {
     "isoCountryCode": "MZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "MM": {
     "isoCountryCode": "MM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NA": {
     "isoCountryCode": "NA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NP": {
     "isoCountryCode": "NP",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NL": {
     "isoCountryCode": "NL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NZ": {
     "isoCountryCode": "NZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NI": {
     "isoCountryCode": "NI",
-    "timesGuessedCorrectly": 9,
+    "timesGuessedCorrectly": 13,
     "timesGuessedIncorrectly": 3
   },
   "NE": {
     "isoCountryCode": "NE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NG": {
     "isoCountryCode": "NG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "NO": {
     "isoCountryCode": "NO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "OM": {
     "isoCountryCode": "OM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PK": {
     "isoCountryCode": "PK",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PS": {
     "isoCountryCode": "PS",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PA": {
     "isoCountryCode": "PA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PG": {
     "isoCountryCode": "PG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PY": {
     "isoCountryCode": "PY",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PE": {
     "isoCountryCode": "PE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PH": {
     "isoCountryCode": "PH",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PL": {
     "isoCountryCode": "PL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "PT": {
     "isoCountryCode": "PT",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "QA": {
     "isoCountryCode": "QA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "RO": {
     "isoCountryCode": "RO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "RU": {
     "isoCountryCode": "RU",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "RW": {
     "isoCountryCode": "RW",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SA": {
     "isoCountryCode": "SA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SN": {
     "isoCountryCode": "SN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "RS": {
     "isoCountryCode": "RS",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SL": {
     "isoCountryCode": "SL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SG": {
     "isoCountryCode": "SG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SK": {
     "isoCountryCode": "SK",
-    "timesGuessedCorrectly": 5,
+    "timesGuessedCorrectly": 7,
     "timesGuessedIncorrectly": 1
   },
   "SI": {
     "isoCountryCode": "SI",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SB": {
     "isoCountryCode": "SB",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SO": {
     "isoCountryCode": "SO",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ZA": {
     "isoCountryCode": "ZA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ES": {
     "isoCountryCode": "ES",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "LK": {
     "isoCountryCode": "LK",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SD": {
     "isoCountryCode": "SD",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SR": {
     "isoCountryCode": "SR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SZ": {
     "isoCountryCode": "SZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SE": {
     "isoCountryCode": "SE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "CH": {
     "isoCountryCode": "CH",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SY": {
     "isoCountryCode": "SY",
-    "timesGuessedCorrectly": 5,
+    "timesGuessedCorrectly": 7,
     "timesGuessedIncorrectly": 1
   },
   "TW": {
     "isoCountryCode": "TW",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TJ": {
     "isoCountryCode": "TJ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TZ": {
     "isoCountryCode": "TZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TH": {
     "isoCountryCode": "TH",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TL": {
     "isoCountryCode": "TL",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TG": {
     "isoCountryCode": "TG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TT": {
     "isoCountryCode": "TT",
-    "timesGuessedCorrectly": 5,
+    "timesGuessedCorrectly": 7,
     "timesGuessedIncorrectly": 1
   },
   "TN": {
     "isoCountryCode": "TN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TR": {
     "isoCountryCode": "TR",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "TM": {
     "isoCountryCode": "TM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "UG": {
     "isoCountryCode": "UG",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "UA": {
     "isoCountryCode": "UA",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "AE": {
     "isoCountryCode": "AE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "GB": {
     "isoCountryCode": "GB",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "US": {
     "isoCountryCode": "US",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "UY": {
     "isoCountryCode": "UY",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "UZ": {
     "isoCountryCode": "UZ",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "VU": {
     "isoCountryCode": "VU",
-    "timesGuessedCorrectly": 5,
-    "timesGuessedIncorrectly": 1
+    "timesGuessedCorrectly": 10,
+    "timesGuessedIncorrectly": 2
   },
   "VE": {
     "isoCountryCode": "VE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "VN": {
     "isoCountryCode": "VN",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "EH": {
     "isoCountryCode": "EH",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "YE": {
     "isoCountryCode": "YE",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ZM": {
     "isoCountryCode": "ZM",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ZW": {
     "isoCountryCode": "ZW",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "KP": {
     "isoCountryCode": "KP",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "ST": {
     "isoCountryCode": "ST",
-    "timesGuessedCorrectly": 3,
+    "timesGuessedCorrectly": 4,
     "timesGuessedIncorrectly": 0
   },
   "SS": {
     "isoCountryCode": "SS",
-    "timesGuessedCorrectly": 3,
-    "timesGuessedIncorrectly": 0
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 1
   }
 }
