@@ -5,6 +5,11 @@ import {
   IsoCountryCode,
   SovereigntyLevel,
 } from "./country_data";
+import {
+  CountryPicker,
+  CountryPickerType,
+  getCountryPicker,
+} from "./country_picker";
 import WorldMap from "./world_map";
 import CountrySuccessStatisticsMap from "./country_success_statistics";
 
@@ -17,6 +22,7 @@ export class Game {
   allCountries: CountryDataMap;
   allCountryCodes: Array<IsoCountryCode>;
   countryStatisticsMap: CountrySuccessStatisticsMap;
+  countryPicker: CountryPicker;
   targetCountry!: CountryDatum;
   worldMap: WorldMap;
 
@@ -51,6 +57,13 @@ export class Game {
     // Hide circles for countries we won't be playing with.
     this.worldMap.hideCountryCircles(countriesToHide);
 
+    this.countryPicker = getCountryPicker(
+      CountryPickerType.RANDOM_ORDER_COUNTRY_PICKER,
+      this.allCountries,
+      this.allCountryCodes,
+      this.countryStatisticsMap
+    );
+
     this.startNextTurn();
 
     // Set click handler on world map. When they click, it will trigger
@@ -62,31 +75,11 @@ export class Game {
   }
 
   /**
-   * Returns a random country from the playing set.
-   */
-  pickRandomCountry(): CountryDatum {
-    const idx = Math.floor(Math.random() * this.allCountryCodes.length);
-    const countryCode = this.allCountryCodes[idx];
-    return this.allCountries.getDataForCode(countryCode)!;
-  }
-
-  /**
-   * Picks the country with the lowest success statistics.
-   */
-  pickLowestRankCountry(): CountryDatum {
-    const countryCode = this.countryStatisticsMap.lowestRankCountry(
-      this.allCountries,
-      1
-    );
-    return this.allCountries.getDataForCode(countryCode)!;
-  }
-
-  /**
    * Starts the next turn of the game by picking the country with the
    * lowest statistics.
    */
   startNextTurn() {
-    this.targetCountry = this.pickRandomCountry();
+    this.targetCountry = this.countryPicker.nextCountry();
     console.log(`Find ${this.targetCountry.countryName}`);
     console.log(
       this.countryStatisticsMap.statisticsForCode(

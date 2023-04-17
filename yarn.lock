@@ -180,6 +180,11 @@
     "@types/mime" "*"
     "@types/node" "*"
 
+"@types/shuffle-array@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/shuffle-array/-/shuffle-array-1.0.2.tgz#6c136030ada522a52f513c6aa36111286b6ddaac"
+  integrity sha512-X8AFrn+D86HFJKer0n2qbG67jHMB4f/QxG28hvNHiouAn84QHVxhuCgGict5djhKP9GZPH2TjCxzf54khqawzQ==
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"
@@ -1326,6 +1331,11 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+shuffle-array@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/shuffle-array/-/shuffle-array-1.0.1.tgz#c4ff3cfe74d16f93730592301b25e6577b12898b"
+  integrity sha512-0TFRU8zVQaLatWKr0/czo19VyPNgb/a3sBc1GAjVfivfzEGaS54vueNgtAu/8/pW7EM/VF5fwq9zgpLdGyRmVw==
 
 side-channel@^1.0.4:
   version "1.0.4"

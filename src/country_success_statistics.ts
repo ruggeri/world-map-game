@@ -41,7 +41,8 @@ export class CountrySuccessStatisticsMap {
     ).json()) as CountrySuccessStatisticsRecord;
 
     // Convert it from JSON object to Map.
-    const countrySuccessStatisticsMap: RawCountrySuccessStatisticsMap = new Map();
+    const countrySuccessStatisticsMap: RawCountrySuccessStatisticsMap =
+      new Map();
     for (const isoCountryCodeStr in serverCountrySuccessStatisticsRecord) {
       const countrySuccessStatistics =
         serverCountrySuccessStatisticsRecord[isoCountryCodeStr];
@@ -60,9 +61,8 @@ export class CountrySuccessStatisticsMap {
    * Gets statistics for the specified country.
    */
   statisticsForCode(isoCountryCode: IsoCountryCode): CountrySuccessStatistics {
-    const countrySuccessStatistics = this.countrySuccessStatisticsMap.get(
-      isoCountryCode
-    );
+    const countrySuccessStatistics =
+      this.countrySuccessStatisticsMap.get(isoCountryCode);
 
     if (countrySuccessStatistics !== undefined) {
       return countrySuccessStatistics;
@@ -97,7 +97,8 @@ export class CountrySuccessStatisticsMap {
     });
 
     // The server will send us the most recent statistics.
-    const newSuccessStatistics = (await response.json()) as CountrySuccessStatistics;
+    const newSuccessStatistics =
+      (await response.json()) as CountrySuccessStatistics;
     // Update our statistics map with the new data.
     this.countrySuccessStatisticsMap.set(isoCountryCode, newSuccessStatistics);
   }
@@ -107,13 +108,12 @@ export class CountrySuccessStatisticsMap {
    * statistics. Smooths percentage correct by using pseudocounts.
    */
   lowestRankCountry(
-    allCountries: CountryDataMap,
+    allCountries: Array<IsoCountryCode>,
     pseudocounts: number
   ): IsoCountryCode {
     let lowestCountryCode: IsoCountryCode | null = null;
     let lowestCountryPercentage: number | null = null;
-    for (const countryDatum of allCountries) {
-      const isoCountryCode = countryDatum.isoCountryCode;
+    for (const isoCountryCode of allCountries) {
       const countryStatistics = this.statisticsForCode(isoCountryCode);
 
       const countryPercentage =
