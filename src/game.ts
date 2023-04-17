@@ -68,8 +68,7 @@ export class Game {
 
     // Set click handler on world map. When they click, it will trigger
     // a guess for the game.
-    worldMap.setWorldMapClickHandler((countryCodeStr: string) => {
-      const isoCountryCode = getCountryCode(countryCodeStr);
+    worldMap.setWorldMapClickHandler((isoCountryCode) => {
       this.attemptGuess(isoCountryCode);
     });
   }
@@ -106,6 +105,7 @@ export class Game {
         this.targetCountry.isoCountryCode,
         "incorrect"
       );
+      await this.countryStatisticsMap.update(guessedCountryCode, "incorrect");
     }
   }
 }

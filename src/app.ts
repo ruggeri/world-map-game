@@ -5,11 +5,12 @@ import WorldMap from "./world_map";
 
 async function main() {
   const allDataMap = CountryDataMap.allDataMap();
-  const countrySuccessStatisticsMap = await CountrySuccessStatisticsMap.fetchMapFromServer();
+  const countrySuccessStatisticsMap =
+    await CountrySuccessStatisticsMap.fetchMapFromServer();
   const worldMap = await WorldMap.fetchMapFromServer();
   new Game(allDataMap, countrySuccessStatisticsMap, worldMap);
 }
 
-main().catch((e) => {
-  console.log(e);
+main().catch((err) => {
+  console.log(err);
 });
