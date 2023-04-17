@@ -86,7 +86,7 @@ export class Game {
    * lowest statistics.
    */
   startNextTurn() {
-    this.targetCountry = this.pickLowestRankCountry();
+    this.targetCountry = this.pickRandomCountry();
     console.log(`Find ${this.targetCountry.countryName}`);
     console.log(
       this.countryStatisticsMap.statisticsForCode(
