@@ -110,6 +110,7 @@ export class Game {
       );
 
       console.log(this.targetCountry);
+      console.log(this.targetCountry.wikiUrl);
       console.log(
         this.countryStatisticsMap.statisticsForCode(
           this.targetCountry.isoCountryCode
