@@ -135,6 +135,14 @@ export class CountrySuccessStatisticsMap {
   toJSON() {
     return Object.fromEntries(this.map);
   }
+
+  [Symbol.iterator]() {
+    return this.map.entries();
+  }
+
+  values() {
+    return this.map.values();
+  }
 }
 
 export default CountrySuccessStatisticsMap;
