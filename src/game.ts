@@ -79,12 +79,9 @@ export class Game {
    */
   startNextTurn() {
     this.targetCountry = this.countryPicker.nextCountry();
-    console.log(`Find ${this.targetCountry.countryName}`);
-    console.log(
-      this.countryStatisticsMap.statisticsForCode(
-        this.targetCountry.isoCountryCode
-      )
-    );
+
+    console.log(`Find ${this.targetCountry.capitalCity}`);
+    // console.log(`Find ${this.targetCountry.countryName}`);
   }
 
   /**
@@ -99,6 +96,14 @@ export class Game {
         this.targetCountry.isoCountryCode,
         "correct"
       );
+
+      console.log(this.targetCountry);
+      console.log(
+        this.countryStatisticsMap.statisticsForCode(
+          this.targetCountry.isoCountryCode
+        )
+      );
+
       this.startNextTurn();
     } else {
       await this.countryStatisticsMap.update(
