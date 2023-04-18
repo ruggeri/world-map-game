@@ -14,6 +14,7 @@ import WorldMap from "./world_map";
 import CountrySuccessStatisticsMap from "./country_success_statistics";
 
 const COUNTRY_POPULATION_MINIMUM = 200_000;
+const HIGHLIGHTED_COUNTRY_LIMIT = 20;
 
 /**
  * Represents the state of the country guessing game.
@@ -23,6 +24,7 @@ export class Game {
   allCountryCodes: Array<IsoCountryCode>;
   countryStatisticsMap: CountrySuccessStatisticsMap;
   countryPicker: CountryPicker;
+  recentCountryCodes: Array<IsoCountryCode>;
   targetCountry!: CountryDatum;
   worldMap: WorldMap;
 
@@ -52,6 +54,7 @@ export class Game {
 
     this.allCountryCodes = Array.from(this.allCountries.keys());
     this.countryStatisticsMap = countryStatisticsMap;
+    this.recentCountryCodes = [];
     this.worldMap = worldMap;
 
     // Hide circles for countries we won't be playing with.
@@ -78,6 +81,15 @@ export class Game {
    * lowest statistics.
    */
   startNextTurn() {
+    // Check in case this is our first turn.
+    if (this.targetCountry) {
+      this.recentCountryCodes.push(this.targetCountry.isoCountryCode);
+      if (this.recentCountryCodes.length > HIGHLIGHTED_COUNTRY_LIMIT) {
+        const codeToRemoveHighlight = this.recentCountryCodes.shift()!;
+        this.worldMap.clearCountryColor(codeToRemoveHighlight);
+      }
+    }
+
     this.targetCountry = this.countryPicker.nextCountry();
 
     console.log(`Find ${this.targetCountry.capitalCity}`);
