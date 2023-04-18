@@ -108,8 +108,10 @@ export class LowestSuccessCountryPicker implements CountryPicker {
 
   nextCountry(): CountryDatum {
     let countriesInPlay = Array.from(this.countriesInPlay);
-    countriesInPlay = _.sortBy(countriesInPlay, (isoCountryCode) => {
-      return this.countrySuccessStatistics.statisticsForCode(isoCountryCode);
+    countriesInPlay = _.sortBy(countriesInPlay, (isoCountryCode): number => {
+      return percentageCorrect(
+        this.countrySuccessStatistics.statisticsForCode(isoCountryCode)
+      );
     });
 
     const CUT_POINTS = [0.0, 0.5, 0.75, 0.9, 0.95];
