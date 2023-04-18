@@ -95,15 +95,14 @@ export class CountrySuccessStatisticsMap {
    * Gets statistics for the specified country.
    */
   statisticsForCode(isoCountryCode: IsoCountryCode): CountrySuccessStatistics {
-    const countrySuccessStatistics = this.map.get(isoCountryCode);
-
-    if (countrySuccessStatistics !== undefined) {
-      return countrySuccessStatistics;
+    if (!this.map.has(isoCountryCode)) {
+      this.map.set(
+        isoCountryCode,
+        defaultCountrySuccessStatistics(isoCountryCode)
+      );
     }
 
-    // If we have no data recorded for this country, then we initialize
-    // a default object.
-    return defaultCountrySuccessStatistics(isoCountryCode);
+    return this.map.get(isoCountryCode)!;
   }
 
   /**

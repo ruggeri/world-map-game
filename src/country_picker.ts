@@ -107,15 +107,17 @@ export class LowestSuccessCountryPicker implements CountryPicker {
   }
 
   nextCountry(): CountryDatum {
-    let statsArr = Array.from(this.countrySuccessStatistics.values());
-    statsArr = _.sortBy(statsArr, percentageCorrect);
+    let countriesInPlay = Array.from(this.countriesInPlay);
+    countriesInPlay = _.sortBy(countriesInPlay, (isoCountryCode) => {
+      return this.countrySuccessStatistics.statisticsForCode(isoCountryCode);
+    });
 
     const CUT_POINTS = [0.0, 0.5, 0.75, 0.9, 0.95];
     const chosenCutPoint = _.sample(CUT_POINTS)!;
-    const endIdx = Math.floor((1 - chosenCutPoint) * statsArr.length);
-    statsArr = statsArr.slice(0, endIdx);
+    const endIdx = Math.floor((1 - chosenCutPoint) * countriesInPlay.length);
+    countriesInPlay = countriesInPlay.slice(0, endIdx);
 
-    const isoCountryCode = _.sample(statsArr)!.isoCountryCode;
+    const isoCountryCode = _.sample(countriesInPlay)!;
     return this.countryDataMap.getDataForCode(isoCountryCode)!;
   }
 }
