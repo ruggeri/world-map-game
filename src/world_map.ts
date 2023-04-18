@@ -79,6 +79,18 @@ export default class WorldMap {
     this.worldMapSVGEl.appendChild(newStyleElement);
   }
 
+  clearCountryColor(isoCountryCode: IsoCountryCode) {
+    const styleTags = this.worldMapDocument.getElementsByTagName("style");
+    const cssSelector = `.${isoCountryCode.toLowerCase()}`;
+    for (let idx = 1; idx < styleTags.length; idx++) {
+      const styleTag = styleTags[idx];
+      if (styleTag.textContent?.includes(cssSelector)) {
+        styleTags[idx].remove();
+        return;
+      }
+    }
+  }
+
   clearCountryColors() {
     const styleTags = this.worldMapDocument.getElementsByTagName("style");
     for (let idx = 1; idx < styleTags.length; idx++) {
