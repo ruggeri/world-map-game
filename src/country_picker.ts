@@ -1,5 +1,8 @@
 import { CountryDataMap, CountryDatum, IsoCountryCode } from "./country_data";
-import CountrySuccessStatisticsMap from "./country_success_statistics";
+import {
+  CountrySuccessStatistics,
+  CountrySuccessStatisticsMap,
+} from "./country_success_statistics";
 import shuffle from "shuffle-array";
 
 type CountryCodes = Array<IsoCountryCode>;
@@ -74,10 +77,25 @@ export class RandomOrderCountryPicker implements CountryPicker {
   }
 }
 
+const PSEUDOCOUNTS = 2;
+const RECENCY_LIMIT = 50;
+
+function percentageCorrect(
+  countrySuccessStatistics: CountrySuccessStatistics
+): number {
+  return (
+    countrySuccessStatistics.timesGuessedCorrectly /
+    (countrySuccessStatistics.timesGuessedIncorrectly +
+      countrySuccessStatistics.timesGuessedCorrectly +
+      PSEUDOCOUNTS)
+  );
+}
+
 export class LowestSuccessCountryPicker implements CountryPicker {
   countryData: CountryDataMap;
   countrySuccessStatistics: CountrySuccessStatisticsMap;
   countriesInPlay: CountryCodes;
+  recentlySelectedCountries: CountryCodes;
 
   constructor(
     countryData: CountryDataMap,
@@ -87,13 +105,69 @@ export class LowestSuccessCountryPicker implements CountryPicker {
     this.countryData = countryData;
     this.countrySuccessStatistics = countrySuccessStatistics;
     this.countriesInPlay = countriesInPlay;
+    this.recentlySelectedCountries = [];
   }
 
   nextCountry(): CountryDatum {
-    const countryCode = this.countrySuccessStatistics.lowestRankCountry(
-      this.countriesInPlay,
-      1
-    );
-    return this.countryData.getDataForCode(countryCode)!;
+    if (this.recentlySelectedCountries.length === RECENCY_LIMIT) {
+      this.recentlySelectedCountries.shift();
+    }
+
+    let minCountryStatistics: CountrySuccessStatistics | null = null;
+
+    for (const currIsoCountryCode of this.countriesInPlay) {
+      if (this.recentlySelectedCountries.includes(currIsoCountryCode)) {
+        continue;
+      }
+
+      const currCountryStatistics =
+        this.countrySuccessStatistics.statisticsForCode(currIsoCountryCode);
+
+      const currCountryPercentage = percentageCorrect(currCountryStatistics);
+
+      let currIsLowest = false;
+      if (minCountryStatistics === null) {
+        // If it is the first country considered, take current.
+        currIsLowest = true;
+      } else if (
+        currCountryPercentage > percentageCorrect(minCountryStatistics)
+      ) {
+        // Skip current if it has higher success rate than min.
+        currIsLowest = false;
+      } else if (
+        currCountryPercentage < percentageCorrect(minCountryStatistics)
+      ) {
+        // Take current if has lower success rate than min.
+        currIsLowest = true;
+      } else if (
+        currCountryStatistics.lastGuessedCorrectly.getTime() >=
+        minCountryStatistics.lastGuessedCorrectly.getTime()
+      ) {
+        // If tied for success rate, skip current if it has more recent
+        // time that it was last guessed correctly.
+        currIsLowest = false;
+      } else if (
+        currCountryStatistics.lastGuessedCorrectly.getTime() <
+        minCountryStatistics.lastGuessedCorrectly.getTime()
+      ) {
+        // If tied for success rate, take current if it has more distant
+        // time that it was last guessed.
+        currIsLowest = true;
+      } else {
+        console.log(currCountryPercentage);
+        console.log(minCountryStatistics);
+        throw new Error("Cases should be exhaustive.");
+      }
+
+      if (!currIsLowest) {
+        continue;
+      }
+
+      minCountryStatistics = currCountryStatistics;
+    }
+
+    const minIsoCountryCode = minCountryStatistics!.isoCountryCode;
+    this.recentlySelectedCountries.push(minIsoCountryCode);
+    return this.countryData.getDataForCode(minIsoCountryCode)!;
   }
 }

@@ -4,7 +4,10 @@ import bodyParser from "body-parser";
 import fs from "fs";
 import express from "express";
 import os from "os";
-import { CountrySuccessStatistics } from "../src/country_success_statistics";
+import {
+  CountrySuccessStatisticsMap,
+  CountrySuccessStatisticsPayload,
+} from "../src/country_success_statistics";
 
 async function main() {
   const app = express();
@@ -26,16 +29,20 @@ async function main() {
 
   const username = os.userInfo().username;
   const statsFilename = `./dist/${username}-country-success-statistics.json`;
-  type CountrySuccessStatisticsMap = Record<string, CountrySuccessStatistics>;
 
   async function readCountryStatistics(): Promise<CountrySuccessStatisticsMap> {
     try {
-      return JSON.parse(
-        await fs.promises.readFile(statsFilename, { encoding: "utf-8" })
+      const countrySuccessStatisticsPayload: CountrySuccessStatisticsPayload =
+        JSON.parse(
+          await fs.promises.readFile(statsFilename, { encoding: "utf-8" })
+        );
+
+      return CountrySuccessStatisticsMap.fromJSON(
+        countrySuccessStatisticsPayload
       );
     } catch (err) {
       console.log(err);
-      return {};
+      return new CountrySuccessStatisticsMap(new Map());
     }
   }
 
@@ -64,20 +71,14 @@ async function main() {
   app.post("/country-success-statistics", async (req, res) => {
     console.log(req.body);
 
+    const isoCountryCode = req.body.isoCountryCode;
+
     let countrySuccessStatistics =
-      countrySuccessStatisticsMap[req.body.isoCountryCode];
-    if (countrySuccessStatistics === undefined) {
-      countrySuccessStatistics = {
-        isoCountryCode: req.body.isoCountryCode,
-        timesGuessedCorrectly: 0,
-        timesGuessedIncorrectly: 0,
-      };
-      countrySuccessStatisticsMap[req.body.isoCountryCode] =
-        countrySuccessStatistics;
-    }
+      countrySuccessStatisticsMap.statisticsForCode(isoCountryCode);
 
     if (req.body.direction === "correct") {
       countrySuccessStatistics.timesGuessedCorrectly++;
+      countrySuccessStatistics.lastGuessedCorrectly = new Date();
     } else if (req.body.direction === "incorrect") {
       countrySuccessStatistics.timesGuessedIncorrectly++;
     }

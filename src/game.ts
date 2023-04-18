@@ -58,7 +58,7 @@ export class Game {
     this.worldMap.hideCountryCircles(countriesToHide);
 
     this.countryPicker = getCountryPicker(
-      CountryPickerType.RANDOM_ORDER_COUNTRY_PICKER,
+      CountryPickerType.LOWEST_SUCCESS_COUNTRY_PICKER,
       this.allCountries,
       this.allCountryCodes,
       this.countryStatisticsMap
