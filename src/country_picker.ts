@@ -108,6 +108,7 @@ export class LowestSuccessCountryPicker implements CountryPicker {
 
   nextCountry(): CountryDatum {
     let countriesInPlay = Array.from(this.countriesInPlay);
+    countriesInPlay = _.shuffle(countriesInPlay);
     countriesInPlay = _.sortBy(countriesInPlay, (isoCountryCode): number => {
       return percentageCorrect(
         this.countrySuccessStatistics.statisticsForCode(isoCountryCode)
