@@ -56,6 +56,7 @@ export class CountrySuccessStatisticsMap {
       await fetch("country-success-statistics")
     ).json()) as CountrySuccessStatisticsPayload;
 
+    console.log("Payload received:");
     console.log(countrySuccessStatisticsPayload);
 
     // Convert it from JSON object to Map.

@@ -1,4 +1,5 @@
 import { getCountryCode, IsoCountryCode } from "./country_data";
+import { delay } from "lodash";
 
 export default class WorldMap {
   worldMapObjectEl: HTMLObjectElement;
@@ -10,16 +11,33 @@ export default class WorldMap {
     const worldMapObjectEl = document.getElementById(
       "world-map"
     ) as HTMLObjectElement;
-    // Has the data already loaded?
-    if (worldMapObjectEl.contentDocument) {
-      return Promise.resolve(new WorldMap(worldMapObjectEl));
-    }
 
-    // If not, wait for it to be loaded.
-    return new Promise<WorldMap>((resolve, reject) => {
-      worldMapObjectEl.addEventListener("load", () => {
+    return new Promise((resolve, _) => {
+      function step() {
+        if (!worldMapObjectEl.contentDocument) {
+          return delay(step, 10);
+        }
+
+        const worldMapDocument = worldMapObjectEl.contentDocument as Document;
+        if (!worldMapDocument.documentElement) {
+          return delay(step, 10);
+        }
+
+        const documentElement =
+          worldMapDocument.documentElement as unknown as SVGSVGElement;
+        console.log("Checking if SVG is loaded...");
+        console.log(documentElement.constructor);
+
+        // For some reason SVG elements first are instantiated as
+        // instances of HTMLHtmlElement before they are fully loaded?
+        if (!documentElement.createSVGNumber) {
+          return delay(step, 10);
+        }
+
         resolve(new WorldMap(worldMapObjectEl));
-      });
+      }
+
+      step();
     });
   }
 
