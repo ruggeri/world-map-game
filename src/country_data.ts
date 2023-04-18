@@ -830,7 +830,7 @@ const rawCountryData: CountryDataMapRecord = {
   EH: {
     isoCountryCode: "EH",
     countryName: "Western Sahara",
-    capitalCity: null,
+    capitalCity: "Laayoune",
     population: "273008",
     sovereigntyLevel: SovereigntyLevel.Disputed,
     wikiUrl: "https://en.wikipedia.org/wiki/Western_Sahara",
