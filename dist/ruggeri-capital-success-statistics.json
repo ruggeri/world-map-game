@@ -1,0 +1,1064 @@
+{
+  "BZ": {
+    "isoCountryCode": "BZ",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:43:52.541Z"
+  },
+  "GA": {
+    "isoCountryCode": "GA",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 7,
+    "lastGuessedCorrectly": "2023-04-19T02:48:20.105Z"
+  },
+  "SG": {
+    "isoCountryCode": "SG",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:32.828Z"
+  },
+  "GM": {
+    "isoCountryCode": "GM",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:42:36.359Z"
+  },
+  "CH": {
+    "isoCountryCode": "CH",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:59.963Z"
+  },
+  "RU": {
+    "isoCountryCode": "RU",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:05.423Z"
+  },
+  "GY": {
+    "isoCountryCode": "GY",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 7,
+    "lastGuessedCorrectly": "2023-04-19T02:47:49.906Z"
+  },
+  "BS": {
+    "isoCountryCode": "BS",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:43:58.625Z"
+  },
+  "JM": {
+    "isoCountryCode": "JM",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:40:53.712Z"
+  },
+  "AM": {
+    "isoCountryCode": "AM",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:26.729Z"
+  },
+  "BB": {
+    "isoCountryCode": "BB",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 6,
+    "lastGuessedCorrectly": "2023-04-19T02:41:47.962Z"
+  },
+  "TT": {
+    "isoCountryCode": "TT",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:46:01.605Z"
+  },
+  "BW": {
+    "isoCountryCode": "BW",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:57.758Z"
+  },
+  "ER": {
+    "isoCountryCode": "ER",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:47:54.689Z"
+  },
+  "GH": {
+    "isoCountryCode": "GH",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:46.459Z"
+  },
+  "AU": {
+    "isoCountryCode": "AU",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:35.204Z"
+  },
+  "LK": {
+    "isoCountryCode": "LK",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:18.124Z"
+  },
+  "NP": {
+    "isoCountryCode": "NP",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:22.591Z"
+  },
+  "HT": {
+    "isoCountryCode": "HT",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:43:49.492Z"
+  },
+  "UY": {
+    "isoCountryCode": "UY",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:41.698Z"
+  },
+  "BI": {
+    "isoCountryCode": "BI",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:48:12.205Z"
+  },
+  "UG": {
+    "isoCountryCode": "UG",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:45:32.207Z"
+  },
+  "TZ": {
+    "isoCountryCode": "TZ",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:39:07.247Z"
+  },
+  "AT": {
+    "isoCountryCode": "AT",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:40:11.996Z"
+  },
+  "BJ": {
+    "isoCountryCode": "BJ",
+    "timesGuessedCorrectly": 8,
+    "timesGuessedIncorrectly": 9,
+    "lastGuessedCorrectly": "2023-04-19T02:39:14.878Z"
+  },
+  "GQ": {
+    "isoCountryCode": "GQ",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 7,
+    "lastGuessedCorrectly": "2023-04-19T02:46:52.023Z"
+  },
+  "BF": {
+    "isoCountryCode": "BF",
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 8,
+    "lastGuessedCorrectly": "2023-04-19T02:46:31.457Z"
+  },
+  "CM": {
+    "isoCountryCode": "CM",
+    "timesGuessedCorrectly": 7,
+    "timesGuessedIncorrectly": 7,
+    "lastGuessedCorrectly": "2023-04-19T02:45:27.959Z"
+  },
+  "BO": {
+    "isoCountryCode": "BO",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:58.109Z"
+  },
+  "AL": {
+    "isoCountryCode": "AL",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:38.438Z"
+  },
+  "AF": {
+    "isoCountryCode": "AF",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:39.424Z"
+  },
+  "AR": {
+    "isoCountryCode": "AR",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:48:00.388Z"
+  },
+  "PE": {
+    "isoCountryCode": "PE",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:39:29.381Z"
+  },
+  "CL": {
+    "isoCountryCode": "CL",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:42:51.076Z"
+  },
+  "AZ": {
+    "isoCountryCode": "AZ",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:44.014Z"
+  },
+  "CF": {
+    "isoCountryCode": "CF",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:46:55.774Z"
+  },
+  "TG": {
+    "isoCountryCode": "TG",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 8,
+    "lastGuessedCorrectly": "2023-04-19T02:37:49.965Z"
+  },
+  "BN": {
+    "isoCountryCode": "BN",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:15.613Z"
+  },
+  "CI": {
+    "isoCountryCode": "CI",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:45:15.374Z"
+  },
+  "BY": {
+    "isoCountryCode": "BY",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:53.113Z"
+  },
+  "CA": {
+    "isoCountryCode": "CA",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:05.671Z"
+  },
+  "AO": {
+    "isoCountryCode": "AO",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:45:49.856Z"
+  },
+  "BA": {
+    "isoCountryCode": "BA",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:21.527Z"
+  },
+  "CU": {
+    "isoCountryCode": "CU",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:18.290Z"
+  },
+  "CV": {
+    "isoCountryCode": "CV",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:43:42.876Z"
+  },
+  "ST": {
+    "isoCountryCode": "ST",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:46:58.507Z"
+  },
+  "CD": {
+    "isoCountryCode": "CD",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:59.122Z"
+  },
+  "CO": {
+    "isoCountryCode": "CO",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:34.428Z"
+  },
+  "DE": {
+    "isoCountryCode": "DE",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:01.610Z"
+  },
+  "BH": {
+    "isoCountryCode": "BH",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:47:37.290Z"
+  },
+  "NE": {
+    "isoCountryCode": "NE",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:46:28.024Z"
+  },
+  "BT": {
+    "isoCountryCode": "BT",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:47:57.672Z"
+  },
+  "CZ": {
+    "isoCountryCode": "CZ",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:02.280Z"
+  },
+  "BR": {
+    "isoCountryCode": "BR",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:38.992Z"
+  },
+  "DJ": {
+    "isoCountryCode": "DJ",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:20.342Z"
+  },
+  "BD": {
+    "isoCountryCode": "BD",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:41:57.128Z"
+  },
+  "DZ": {
+    "isoCountryCode": "DZ",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:46.093Z"
+  },
+  "AE": {
+    "isoCountryCode": "AE",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:45:46.991Z"
+  },
+  "CY": {
+    "isoCountryCode": "CY",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:00.175Z"
+  },
+  "EC": {
+    "isoCountryCode": "EC",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:45:11.674Z"
+  },
+  "PY": {
+    "isoCountryCode": "PY",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:38:39.778Z"
+  },
+  "CG": {
+    "isoCountryCode": "CG",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:42:39.092Z"
+  },
+  "ET": {
+    "isoCountryCode": "ET",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:03.639Z"
+  },
+  "FJ": {
+    "isoCountryCode": "FJ",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:43:17.943Z"
+  },
+  "VU": {
+    "isoCountryCode": "VU",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 6,
+    "lastGuessedCorrectly": "2023-04-19T02:40:06.678Z"
+  },
+  "CR": {
+    "isoCountryCode": "CR",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:48:27.004Z"
+  },
+  "DO": {
+    "isoCountryCode": "DO",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:43:05.377Z"
+  },
+  "EG": {
+    "isoCountryCode": "EG",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:19.940Z"
+  },
+  "BG": {
+    "isoCountryCode": "BG",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:12.891Z"
+  },
+  "FR": {
+    "isoCountryCode": "FR",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:37.393Z"
+  },
+  "TD": {
+    "isoCountryCode": "TD",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:38:34.747Z"
+  },
+  "GN": {
+    "isoCountryCode": "GN",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:42:06.777Z"
+  },
+  "KM": {
+    "isoCountryCode": "KM",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:42:23.993Z"
+  },
+  "GE": {
+    "isoCountryCode": "GE",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:29.610Z"
+  },
+  "GR": {
+    "isoCountryCode": "GR",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:31.159Z"
+  },
+  "GT": {
+    "isoCountryCode": "GT",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:22.490Z"
+  },
+  "EH": {
+    "isoCountryCode": "EH",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:41.442Z"
+  },
+  "ES": {
+    "isoCountryCode": "ES",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:48.830Z"
+  },
+  "BE": {
+    "isoCountryCode": "BE",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:05.075Z"
+  },
+  "IR": {
+    "isoCountryCode": "IR",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:00.443Z"
+  },
+  "SN": {
+    "isoCountryCode": "SN",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:38:29.513Z"
+  },
+  "IT": {
+    "isoCountryCode": "IT",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:54.958Z"
+  },
+  "GW": {
+    "isoCountryCode": "GW",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:48:08.471Z"
+  },
+  "EE": {
+    "isoCountryCode": "EE",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:30.242Z"
+  },
+  "JO": {
+    "isoCountryCode": "JO",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:37.279Z"
+  },
+  "KE": {
+    "isoCountryCode": "KE",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:51.296Z"
+  },
+  "IL": {
+    "isoCountryCode": "IL",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:41:00.095Z"
+  },
+  "HN": {
+    "isoCountryCode": "HN",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:45:43.324Z"
+  },
+  "GB": {
+    "isoCountryCode": "GB",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:47:52.156Z"
+  },
+  "HU": {
+    "isoCountryCode": "HU",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:37.663Z"
+  },
+  "KH": {
+    "isoCountryCode": "KH",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:53.443Z"
+  },
+  "ID": {
+    "isoCountryCode": "ID",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:47.779Z"
+  },
+  "JP": {
+    "isoCountryCode": "JP",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:09.496Z"
+  },
+  "IE": {
+    "isoCountryCode": "IE",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:52.147Z"
+  },
+  "CN": {
+    "isoCountryCode": "CN",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:31.381Z"
+  },
+  "LR": {
+    "isoCountryCode": "LR",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:30.438Z"
+  },
+  "IQ": {
+    "isoCountryCode": "IQ",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:40.021Z"
+  },
+  "KR": {
+    "isoCountryCode": "KR",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:05.229Z"
+  },
+  "LY": {
+    "isoCountryCode": "LY",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:09.524Z"
+  },
+  "LT": {
+    "isoCountryCode": "LT",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:08.742Z"
+  },
+  "LV": {
+    "isoCountryCode": "LV",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:36.508Z"
+  },
+  "KP": {
+    "isoCountryCode": "KP",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:07.539Z"
+  },
+  "KZ": {
+    "isoCountryCode": "KZ",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:45.145Z"
+  },
+  "LA": {
+    "isoCountryCode": "LA",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:16.577Z"
+  },
+  "LU": {
+    "isoCountryCode": "LU",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:37:39.729Z"
+  },
+  "KW": {
+    "isoCountryCode": "KW",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:41.690Z"
+  },
+  "MM": {
+    "isoCountryCode": "MM",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:33.227Z"
+  },
+  "LS": {
+    "isoCountryCode": "LS",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:38:04.480Z"
+  },
+  "ML": {
+    "isoCountryCode": "ML",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:38:47.013Z"
+  },
+  "IN": {
+    "isoCountryCode": "IN",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:03.026Z"
+  },
+  "MU": {
+    "isoCountryCode": "MU",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:40:18.612Z"
+  },
+  "SL": {
+    "isoCountryCode": "SL",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:43:14.426Z"
+  },
+  "MT": {
+    "isoCountryCode": "MT",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:40:02.578Z"
+  },
+  "MK": {
+    "isoCountryCode": "MK",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:33.155Z"
+  },
+  "KG": {
+    "isoCountryCode": "KG",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:38:21.764Z"
+  },
+  "UZ": {
+    "isoCountryCode": "UZ",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:41:12.894Z"
+  },
+  "MW": {
+    "isoCountryCode": "MW",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:14.321Z"
+  },
+  "IS": {
+    "isoCountryCode": "IS",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:56.724Z"
+  },
+  "DK": {
+    "isoCountryCode": "DK",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:53.107Z"
+  },
+  "MX": {
+    "isoCountryCode": "MX",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:02.888Z"
+  },
+  "MA": {
+    "isoCountryCode": "MA",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:54.679Z"
+  },
+  "MY": {
+    "isoCountryCode": "MY",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:23.480Z"
+  },
+  "NG": {
+    "isoCountryCode": "NG",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:55.306Z"
+  },
+  "NZ": {
+    "isoCountryCode": "NZ",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:48.594Z"
+  },
+  "OM": {
+    "isoCountryCode": "OM",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:32.190Z"
+  },
+  "MN": {
+    "isoCountryCode": "MN",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:34.041Z"
+  },
+  "MV": {
+    "isoCountryCode": "MV",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:43:27.626Z"
+  },
+  "MR": {
+    "isoCountryCode": "MR",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 6,
+    "lastGuessedCorrectly": "2023-04-19T02:40:44.979Z"
+  },
+  "ME": {
+    "isoCountryCode": "ME",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:13.264Z"
+  },
+  "MD": {
+    "isoCountryCode": "MD",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:57.696Z"
+  },
+  "FI": {
+    "isoCountryCode": "FI",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:16.864Z"
+  },
+  "NA": {
+    "isoCountryCode": "NA",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:02.340Z"
+  },
+  "LB": {
+    "isoCountryCode": "LB",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:42.487Z"
+  },
+  "RO": {
+    "isoCountryCode": "RO",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:40:15.529Z"
+  },
+  "MG": {
+    "isoCountryCode": "MG",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:44.037Z"
+  },
+  "PA": {
+    "isoCountryCode": "PA",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:12.446Z"
+  },
+  "HR": {
+    "isoCountryCode": "HR",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:24.671Z"
+  },
+  "PG": {
+    "isoCountryCode": "PG",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:41:21.244Z"
+  },
+  "TL": {
+    "isoCountryCode": "TL",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:42:10.527Z"
+  },
+  "PK": {
+    "isoCountryCode": "PK",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:31.614Z"
+  },
+  "PH": {
+    "isoCountryCode": "PH",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:46.139Z"
+  },
+  "PS": {
+    "isoCountryCode": "PS",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:34.356Z"
+  },
+  "PL": {
+    "isoCountryCode": "PL",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:29.590Z"
+  },
+  "RW": {
+    "isoCountryCode": "RW",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:03.944Z"
+  },
+  "SD": {
+    "isoCountryCode": "SD",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:51.190Z"
+  },
+  "NI": {
+    "isoCountryCode": "NI",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:45:06.125Z"
+  },
+  "VE": {
+    "isoCountryCode": "VE",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:45:37.307Z"
+  },
+  "SB": {
+    "isoCountryCode": "SB",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 5,
+    "lastGuessedCorrectly": "2023-04-19T02:46:13.140Z"
+  },
+  "SA": {
+    "isoCountryCode": "SA",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:25.642Z"
+  },
+  "PT": {
+    "isoCountryCode": "PT",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:55.859Z"
+  },
+  "RS": {
+    "isoCountryCode": "RS",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:25.424Z"
+  },
+  "NL": {
+    "isoCountryCode": "NL",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:20.479Z"
+  },
+  "QA": {
+    "isoCountryCode": "QA",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:39:52.563Z"
+  },
+  "SO": {
+    "isoCountryCode": "SO",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:48:22.086Z"
+  },
+  "SK": {
+    "isoCountryCode": "SK",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:00.011Z"
+  },
+  "SR": {
+    "isoCountryCode": "SR",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 1,
+    "lastGuessedCorrectly": "2023-04-19T02:43:35.559Z"
+  },
+  "TN": {
+    "isoCountryCode": "TN",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:43:22.544Z"
+  },
+  "SE": {
+    "isoCountryCode": "SE",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:55.430Z"
+  },
+  "SY": {
+    "isoCountryCode": "SY",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:44.678Z"
+  },
+  "US": {
+    "isoCountryCode": "US",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:41:03.545Z"
+  },
+  "MZ": {
+    "isoCountryCode": "MZ",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:25.174Z"
+  },
+  "ZM": {
+    "isoCountryCode": "ZM",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 4,
+    "lastGuessedCorrectly": "2023-04-19T02:39:57.462Z"
+  },
+  "SV": {
+    "isoCountryCode": "SV",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:38.390Z"
+  },
+  "SI": {
+    "isoCountryCode": "SI",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:36.445Z"
+  },
+  "NO": {
+    "isoCountryCode": "NO",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:42:27.693Z"
+  },
+  "TM": {
+    "isoCountryCode": "TM",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 2,
+    "lastGuessedCorrectly": "2023-04-19T02:44:44.625Z"
+  },
+  "SZ": {
+    "isoCountryCode": "SZ",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 6,
+    "lastGuessedCorrectly": "2023-04-19T02:44:52.741Z"
+  },
+  "VN": {
+    "isoCountryCode": "VN",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:45:57.473Z"
+  },
+  "UA": {
+    "isoCountryCode": "UA",
+    "timesGuessedCorrectly": 6,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:39:39.094Z"
+  },
+  "TH": {
+    "isoCountryCode": "TH",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:40:57.578Z"
+  },
+  "YE": {
+    "isoCountryCode": "YE",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:38:23.497Z"
+  },
+  "TW": {
+    "isoCountryCode": "TW",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:43.888Z"
+  },
+  "SS": {
+    "isoCountryCode": "SS",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:18.990Z"
+  },
+  "ZW": {
+    "isoCountryCode": "ZW",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:42.242Z"
+  },
+  "TJ": {
+    "isoCountryCode": "TJ",
+    "timesGuessedCorrectly": 5,
+    "timesGuessedIncorrectly": 3,
+    "lastGuessedCorrectly": "2023-04-19T02:38:42.829Z"
+  },
+  "ZA": {
+    "isoCountryCode": "ZA",
+    "timesGuessedCorrectly": 3,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:44:02.441Z"
+  },
+  "TR": {
+    "isoCountryCode": "TR",
+    "timesGuessedCorrectly": 4,
+    "timesGuessedIncorrectly": 0,
+    "lastGuessedCorrectly": "2023-04-19T02:46:21.039Z"
+  }
+}
