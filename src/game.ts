@@ -14,7 +14,7 @@ import WorldMap from "./world_map";
 import CountrySuccessStatisticsMap from "./country_success_statistics";
 
 const COUNTRY_POPULATION_MINIMUM = 200_000;
-const HIGHLIGHTED_COUNTRY_LIMIT = 20;
+const HIGHLIGHTED_COUNTRY_LIMIT = -1;
 
 /**
  * Represents the state of the country guessing game.
@@ -81,8 +81,9 @@ export class Game {
    * lowest statistics.
    */
   startNextTurn() {
-    // Check in case this is our first turn.
-    if (this.targetCountry) {
+    // Check if there is a limit on highlighted countries, and check in
+    // case this is our first turn.
+    if (HIGHLIGHTED_COUNTRY_LIMIT !== -1 && this.targetCountry) {
       this.recentCountryCodes.push(this.targetCountry.isoCountryCode);
       if (this.recentCountryCodes.length > HIGHLIGHTED_COUNTRY_LIMIT) {
         const codeToRemoveHighlight = this.recentCountryCodes.shift()!;
