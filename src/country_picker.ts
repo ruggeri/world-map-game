@@ -116,7 +116,7 @@ export class LowestSuccessCountryPicker implements CountryPicker {
       );
     });
 
-    const CUT_POINTS = [0.0, 0.5, 0.75, 0.9, 0.95];
+    const CUT_POINTS = [0.0];
     const chosenCutPoint = _.sample(CUT_POINTS)!;
     const endIdx = Math.floor((1 - chosenCutPoint) * countriesInPlay.length);
     countriesInPlay = countriesInPlay.slice(0, endIdx);
