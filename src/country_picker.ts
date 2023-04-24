@@ -1,4 +1,5 @@
-import { CountryDataMap, CountryDatum, IsoCountryCode } from "./country_data";
+import { CountryDatum, IsoCountryCode } from "./country_data";
+import CountryDataMap from "./country_data_map";
 import {
   CountrySuccessStatistics,
   CountrySuccessStatisticsMap,

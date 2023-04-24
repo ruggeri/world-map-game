@@ -282,27 +282,25 @@ export interface CountryDatum {
 }
 
 /**
- * The population is stored as a string because JavaScript doesn't have
- * integers. Also isoCountryCode is just a string.
+ * JSON serialization of CountryData. The population is stored as a
+ * string because JavaScript doesn't have integers. Also isoCountryCode
+ * is just a string.
  */
-interface RawCountryDatum {
+interface CountryDatumJSON {
   isoCountryCode: string;
   countryName: string;
   capitalCity: string | null;
   population: string;
   sovereigntyLevel: SovereigntyLevel;
-  wikiUrl: string;
   parentCountry?: string;
+  wikiUrl: string;
 }
 
 // JavaScript object representation of country data (with unparsed
 // populations).
-type CountryDataMapRecord = Record<string, RawCountryDatum>;
-// JavaScript Map representation of country data (with parsed
-// populations).
-type RawCountryDataMap = Map<IsoCountryCode, CountryDatum>;
+type CountryDataMapJSON = Record<string, CountryDatumJSON>;
 
-const rawCountryData: CountryDataMapRecord = {
+export const jsonCountryDataMap: CountryDataMapJSON = {
   /* A */
   AD: {
     isoCountryCode: "AD",
@@ -2384,102 +2382,3 @@ const rawCountryData: CountryDataMapRecord = {
     wikiUrl: "https://en.wikipedia.org/wiki/Zimbabwe",
   },
 };
-
-/**
- * `CountryDataMap` is the preferred way to access country data.
- * Effectively a wrapper class.
- */
-export class CountryDataMap {
-  countryDataMap: RawCountryDataMap;
-
-  /**
-   * Builds and returns a `CountryDataMap` consisting of all the
-   * countries' data.
-   */
-  static allDataMap(): CountryDataMap {
-    const countryDataMap: RawCountryDataMap = new Map();
-    for (const isoCountryCodeStr in rawCountryData) {
-      const rawCountryDatum = rawCountryData[isoCountryCodeStr];
-      const isoCountryCode =
-        IsoCountryCode[isoCountryCodeStr as keyof typeof IsoCountryCode];
-      const countryDatum: CountryDatum = {
-        ...rawCountryDatum,
-        isoCountryCode,
-        population: Number(rawCountryDatum.population),
-      };
-      countryDataMap.set(isoCountryCode, countryDatum);
-    }
-
-    return new CountryDataMap(countryDataMap);
-  }
-
-  static dataMapForPlay(): [CountryDataMap, Array<IsoCountryCode>] {
-    const COUNTRY_POPULATION_MINIMUM = 200_000;
-
-    const allCountriesMap = this.allDataMap();
-
-    const removedCountries: Array<IsoCountryCode> = [];
-    const filteredCountriesMap = allCountriesMap.filter(
-      (countryDatum: CountryDatum): boolean => {
-        // Don't play with very small population countries.
-        if (countryDatum.population < COUNTRY_POPULATION_MINIMUM) {
-          removedCountries.push(countryDatum.isoCountryCode);
-          return false;
-        }
-
-        // Don't play with countries that aren't sovereign.
-        if (countryDatum.sovereigntyLevel === SovereigntyLevel.Territory) {
-          removedCountries.push(countryDatum.isoCountryCode);
-          return false;
-        }
-
-        return true;
-      }
-    );
-
-    return [filteredCountriesMap, removedCountries];
-  }
-
-  constructor(countryDataMap: RawCountryDataMap) {
-    this.countryDataMap = countryDataMap;
-  }
-
-  /**
-   * Produces a `CountryDataMap` of only those countries that match the
-   * `filterFn`.
-   */
-  filter(filterFn: (countryDatum: CountryDatum) => boolean): CountryDataMap {
-    const filteredCountryDataMap: RawCountryDataMap = new Map();
-    for (const countryDatum of this.countryDataMap.values()) {
-      if (!filterFn(countryDatum)) {
-        continue;
-      }
-      filteredCountryDataMap.set(countryDatum.isoCountryCode, countryDatum);
-    }
-
-    return new CountryDataMap(filteredCountryDataMap);
-  }
-
-  /**
-   * Get data for the specified country.
-   */
-  getDataForCode(isoCountryCode: IsoCountryCode): CountryDatum | null {
-    return this.countryDataMap.get(isoCountryCode) || null;
-  }
-
-  /**
-   * Return an iterator for all the keys in the `CountryDataMap`.
-   */
-  keys() {
-    return this.countryDataMap.keys();
-  }
-
-  /**
-   * Return an iterator for the country data values in the map.
-   */
-  [Symbol.iterator]() {
-    return this.countryDataMap.values();
-  }
-}
-
-export default CountryDataMap;

@@ -1,4 +1,4 @@
-import CountryDataMap from "./country_data";
+import CountryDataMap from "./country_data_map";
 import CountrySuccessStatisticsMap from "./country_success_statistics";
 import Game from "./game";
 import WorldMap from "./world_map";
