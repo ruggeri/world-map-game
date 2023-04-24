@@ -1,10 +1,4 @@
-import {
-  CountryDataMap,
-  CountryDatum,
-  getCountryCode,
-  IsoCountryCode,
-  SovereigntyLevel,
-} from "./country_data";
+import { CountryDataMap, CountryDatum, IsoCountryCode } from "./country_data";
 import {
   CountryPicker,
   CountryPickerType,
@@ -13,7 +7,6 @@ import {
 import WorldMap from "./world_map";
 import CountrySuccessStatisticsMap from "./country_success_statistics";
 
-const COUNTRY_POPULATION_MINIMUM = 200_000;
 const HIGHLIGHTED_COUNTRY_LIMIT = -1;
 
 /**
@@ -33,32 +26,16 @@ export class Game {
     countryStatisticsMap: CountrySuccessStatisticsMap,
     worldMap: WorldMap
   ) {
-    const countriesToHide: Array<IsoCountryCode> = [];
-    this.allCountries = allCountries.filter(
-      (countryDatum: CountryDatum): boolean => {
-        // Don't play with very small population countries.
-        if (countryDatum.population < COUNTRY_POPULATION_MINIMUM) {
-          countriesToHide.push(countryDatum.isoCountryCode);
-          return false;
-        }
+    const [countryDataMap, removedCountries] = CountryDataMap.dataMapForPlay();
 
-        // Don't play with countries that aren't sovereign.
-        if (countryDatum.sovereigntyLevel === SovereigntyLevel.Territory) {
-          countriesToHide.push(countryDatum.isoCountryCode);
-          return false;
-        }
-
-        return true;
-      }
-    );
-
+    this.allCountries = countryDataMap;
     this.allCountryCodes = Array.from(this.allCountries.keys());
     this.countryStatisticsMap = countryStatisticsMap;
     this.recentCountryCodes = [];
     this.worldMap = worldMap;
 
     // Hide circles for countries we won't be playing with.
-    this.worldMap.hideCountryCircles(countriesToHide);
+    this.worldMap.hideCountryCircles(removedCountries);
 
     this.countryPicker = getCountryPicker(
       CountryPickerType.LOWEST_SUCCESS_COUNTRY_PICKER,

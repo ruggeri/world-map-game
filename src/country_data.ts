@@ -2413,6 +2413,33 @@ export class CountryDataMap {
     return new CountryDataMap(countryDataMap);
   }
 
+  static dataMapForPlay(): [CountryDataMap, Array<IsoCountryCode>] {
+    const COUNTRY_POPULATION_MINIMUM = 200_000;
+
+    const allCountriesMap = this.allDataMap();
+
+    const removedCountries: Array<IsoCountryCode> = [];
+    const filteredCountriesMap = allCountriesMap.filter(
+      (countryDatum: CountryDatum): boolean => {
+        // Don't play with very small population countries.
+        if (countryDatum.population < COUNTRY_POPULATION_MINIMUM) {
+          removedCountries.push(countryDatum.isoCountryCode);
+          return false;
+        }
+
+        // Don't play with countries that aren't sovereign.
+        if (countryDatum.sovereigntyLevel === SovereigntyLevel.Territory) {
+          removedCountries.push(countryDatum.isoCountryCode);
+          return false;
+        }
+
+        return true;
+      }
+    );
+
+    return [filteredCountriesMap, removedCountries];
+  }
+
   constructor(countryDataMap: RawCountryDataMap) {
     this.countryDataMap = countryDataMap;
   }
