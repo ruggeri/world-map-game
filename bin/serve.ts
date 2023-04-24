@@ -28,7 +28,7 @@ async function main() {
   });
 
   const username = os.userInfo().username;
-  const statsFilename = `./dist/${username}-country-success-statistics.json`;
+  const statsFilename = `./dist/${username}-capital-success-statistics.json`;
 
   async function readCountryStatistics(): Promise<CountrySuccessStatisticsMap> {
     try {
